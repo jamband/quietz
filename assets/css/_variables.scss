@@ -1,0 +1,97 @@
+// Bootstrap
+// https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+
+@use "sass:color";
+@use "sass:map";
+
+// Color system
+$primary:       #6b7279;
+
+$light:         #f8f9fa;
+
+// Options
+$enable-caret:                false;
+$enable-shadow:               true;
+$enable-validation-icons:     false;
+
+// Body
+$body-color:                $primary;
+
+// Links
+$link-decoration:                         underline;
+$link-hover-color:                        $primary;
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+);
+
+$breakpoint-sm:       map.get($grid-breakpoints, 'sm');
+$breakpoint-md:       map.get($grid-breakpoints, 'md');
+
+$breakpoint-sm-down:  $breakpoint-sm - 0.02;
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+);
+
+// Components
+$box-shadow-sm:               0 0.125rem 0.25rem color.scale(#000, $lightness: 0%, $alpha: -90%);
+
+// Typography
+$font-family-sans-serif:      "Source Sans Pro", "Yu Gothic", YuGothic, sans-serif;
+
+$font-size-base:              1rem;
+$font-size-sm:                $font-size-base * 0.875;
+
+$line-height-base:            1.65;
+
+$text-muted:                  color.scale($primary, $lightness: 90%);
+
+$list-inline-padding:         0.8rem;
+
+// Navbar
+$navbar-toggler-font-size:          $font-size-base;
+
+$navbar-light-toggler-border-color: none;
+
+// Dropdowns
+$dropdown-border-color:             none;
+$dropdown-divider-bg:               color.scale($light, $lightness: -15%);
+
+$dropdown-link-color:               $primary;
+$dropdown-link-hover-bg:            color.scale($light, $lightness: -3%);
+
+// Pagination
+$pagination-color:                  color.scale($primary, $lightness: -30%);
+$pagination-bg:                     transparent;
+
+$pagination-border-color:           none;
+
+$pagination-hover-bg:               color.scale($light, $lightness: -20%, $alpha: -90%);
+
+$pagination-disabled-color:         color.scale($primary, $lightness: 75%);
+$pagination-disabled-bg:            transparent;
+
+// Toasts
+$toast-background-color:            $light;
+$toast-border-color:                $light;
+$toast-box-shadow:                  $box-shadow-sm;
+
+$toast-header-background-color:     $light;
+$toast-header-border-color:         color.scale($light, $lightness: -5%);
+
+// Modals
+$modal-backdrop-bg:                 $primary;
+$modal-backdrop-opacity:            0.4;
+
+// Breadcrumbs
+$breadcrumb-font-size:              $font-size-sm;
+$breadcrumb-padding-x:              0;
+$breadcrumb-bg:                     none;
+$breadcrumb-divider-color:          color.scale($primary, $lightness: 65%);
+$breadcrumb-active-color:           color.scale($primary, $lightness: 45%);
