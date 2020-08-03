@@ -4,8 +4,8 @@
       <li
         v-for="(route, index) in routes"
         :key="index"
-        :aria-current="current(index) ? 'page' : false"
-        :class="current(index) ? 'active' : false"
+        :aria-current="current(index) ? 'page' : null"
+        :class="{ active: current(index) }"
         class="breadcrumb-item"
       >
         <template v-if="current(index)">
