@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.0.0-alpha1",
-    "nuxt": "^2.14.0",
+    "nuxt": "^2.14.1",
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
@@ -22,7 +22,7 @@
     "fibers": "^5.0.0",
     "nuxt-purgecss": "^1.0.0",
     "sass": "^1.26.10",
-    "sass-loader": "^9.0.2",
+    "sass-loader": "^9.0.3",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
