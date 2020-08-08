@@ -1,4 +1,15 @@
 $utilities: (
+  // remove core utilities
+  "float": null,
+  "overflow": null,
+  "border": null,
+  "border-top": null,
+  "border-right": null,
+  "border-bottom": null,
+  "border-left": null,
+  "border-color": null,
+  "visibility": null,
+  // custom utilities
   "width": (
     property: width,
     class: w,
