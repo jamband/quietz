@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="row">
-      <div class="btn-group btn-group-sm my-3 col-6 col-md-4" role="group" aria-label="Progress">
-        <button type="button" class="w-50 btn btn-light shadow-sm" @click="push()">{{ button }}</button>
-        <button type="button" class="w-50 btn btn-light shadow-sm" @click="clear()">Clear</button>
+      <div class="btn-group btn-group-sm d-flex my-3 col-6 col-md-4" role="group" aria-label="Progress">
+        <button type="button" class="btn btn-light flex-even shadow-sm" @click="push()">{{ button }}</button>
+        <button type="button" class="btn btn-light flex-even shadow-sm" @click="clear()">Clear</button>
       </div>
     </div>
     <div class="progress mt-3" style="height: 1px;">

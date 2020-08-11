@@ -2,7 +2,7 @@
   <div>
     <button
       type="button"
-      class="btn btn-light btn-sm w-25 shadow-sm"
+      class="btn btn-light btn-sm w-24 shadow-sm"
       data-toggle="collapse"
       data-target="#collapseExample"
       aria-expanded="false"
