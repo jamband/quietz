@@ -1,7 +1,7 @@
 <template>
   <div>
     <button type="button" class="btn btn-light shadow-sm" @click="show()">Show</button>
-    <div :class="$style._toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div :class="$style.toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header border-bottom-primary">
         <strong class="mr-auto">Toast</strong>
         <small>from version 4.2</small>
@@ -37,7 +37,7 @@ export default {
 <style lang="scss" module>
 @import "../assets/css/variables";
 
-._toast {
+.toast {
   position: absolute;
   top: 1rem;
 

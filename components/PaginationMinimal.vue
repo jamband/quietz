@@ -46,7 +46,7 @@
         </NLink>
       </li>
     </ul>
-    <div :class="$style._information" aria-label="Page Information">
+    <div :class="$style.information" aria-label="Page Information">
       {{ currentPage }}/{{ pageCount }}
     </div>
   </nav>
@@ -83,7 +83,7 @@ export default {
 </script>
 
 <style module>
-._information {
+.information {
   bottom: 3.6em;
   color: darkgray;
   font-size: 75%;

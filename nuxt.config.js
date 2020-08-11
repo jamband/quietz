@@ -54,11 +54,6 @@ export default {
     paths: [
       './node_modules/bootstrap/dist/js/bootstrap.js'
     ],
-    whitelistPatterns: [
-      // for css modules (e.g. $style._foo)
-      /^_/,
-      // for icons
-      /svg.*/
-    ]
+    extractors: () => []
   }
 }
