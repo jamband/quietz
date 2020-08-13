@@ -8,13 +8,13 @@
           :aria-label="ratio"
           type="button"
           class="btn btn-light shadow-sm"
-          @click="show(ratio)"
+          @click="setEmbedSelector(ratio)"
         >
           {{ ratio }}
         </button>
       </p>
     </div>
-    <div v-if="selector" :class="selector" class="embed-responsive">
+    <div v-if="embedSelector" :class="embedSelector" class="embed-responsive">
       <img
         class="embed-responsive-item rounded"
         src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO89eDpfwAI2wOgwxlaYQAAAABJRU5ErkJggg=="
@@ -28,32 +28,24 @@
 export default {
   data () {
     return {
-      ratioList: ['21:9', '16:9', '4:3', '1:1'],
-      selector: '',
-      embeds: [
-        {
-          ratio: '21:9',
-          selector: 'embed-responsive-21by9'
-        },
-        {
-          ratio: '16:9',
-          selector: 'embed-responsive-16by9'
-        },
-        {
-          ratio: '4:3',
-          selector: 'embed-responsive-4by3'
-        },
-        {
-          ratio: '1:1',
-          selector: 'embed-responsive-1by1'
-        }
-      ]
+      embedSelector: ''
+    }
+  },
+  computed: {
+    ratioList () {
+      return ['21:9', '16:9', '4:3', '1:1']
     }
   },
   methods: {
-    show (ratio) {
-      const { selector } = this.embeds.find(embed => embed.ratio === ratio)
-      this.selector = selector
+    setEmbedSelector (ratio) {
+      const embeds = [
+        { ratio: '21:9', selector: 'embed-responsive-21by9' },
+        { ratio: '16:9', selector: 'embed-responsive-16by9' },
+        { ratio: '4:3', selector: 'embed-responsive-4by3' },
+        { ratio: '1:1', selector: 'embed-responsive-1by1' }
+      ]
+      const { selector } = embeds.find(embed => embed.ratio === ratio)
+      this.embedSelector = selector
     }
   }
 }

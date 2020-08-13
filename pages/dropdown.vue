@@ -59,9 +59,7 @@ export default {
     }
   },
   mounted () {
-    import('popper.js').then(() => {
-      import('bootstrap/js/dist/dropdown')
-    })
+    import('bootstrap/js/dist/dropdown')
     this.contents = this.generateContents()
   },
   methods: {

@@ -7,9 +7,9 @@
       data-target="#collapseExample"
       aria-expanded="false"
       aria-controls="collapse"
-      @click="show()"
+      @click="toggleButtonText()"
     >
-      {{ button }}
+      {{ buttonText }}
     </button>
     <div id="collapseExample" class="collapse mt-3">
       <div class="p-3 shadow-sm bg-light rounded">
@@ -24,17 +24,17 @@
 export default {
   data () {
     return {
-      button: 'Show',
-      toggle: true
+      buttonText: 'Show'
     }
   },
   mounted () {
     import('bootstrap/js/dist/collapse')
   },
   methods: {
-    show () {
-      this.button = this.toggle ? 'Hide' : 'Show'
-      this.toggle = !this.toggle
+    toggleButtonText () {
+      this.buttonText = this.buttonText === 'Show'
+        ? 'Hide'
+        : 'Show'
     }
   }
 }
