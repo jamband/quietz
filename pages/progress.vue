@@ -2,7 +2,7 @@
   <div>
     <div class="row">
       <div class="btn-group btn-group-sm d-flex my-3 col-6 col-md-4" role="group" aria-label="Progress">
-        <button type="button" class="btn btn-light flex-even shadow-sm" @click="push()">{{ button }}</button>
+        <button type="button" class="btn btn-light flex-even shadow-sm" @click="toggle()">{{ toggleButtonText }}</button>
         <button type="button" class="btn btn-light flex-even shadow-sm" @click="clear()">Clear</button>
       </div>
     </div>
@@ -27,41 +27,30 @@ export default {
   data () {
     return {
       bar: 0,
-      button: 'Start',
+      toggleButtonText: 'Start',
       intervalId: 0
     }
   },
   methods: {
-    push () {
-      if (this.button === 'Start') {
-        this.button = 'Pause'
-        this.start()
-        return
-      }
-      if (this.button === 'Pause') {
-        this.button = 'Continue'
+    toggle () {
+      if (/^(Start|Continue)$/.test(this.toggleButtonText)) {
+        this.toggleButtonText = 'Pause'
+
+        this.intervalId = window.setInterval(() => {
+          if (this.bar === 100) { return }
+          this.bar++
+        }, 100)
+      } else {
+        this.toggleButtonText = 'Continue'
         this.stop()
-        return
       }
-      if (this.button === 'Continue') {
-        this.button = 'Pause'
-        this.start()
-      }
-    },
-    start () {
-      this.intervalId = setInterval(() => {
-        if (this.bar === 100) {
-          return
-        }
-        this.bar++
-      }, 100)
     },
     stop () {
       clearInterval(this.intervalId)
     },
     clear () {
       this.bar = 0
-      this.button = 'Start'
+      this.toggleButtonText = 'Start'
       this.stop()
     }
   }
