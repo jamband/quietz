@@ -9,15 +9,15 @@
   },
   "dependencies": {
     "bootstrap": "^5.0.0-alpha1",
-    "nuxt": "^2.14.1",
+    "nuxt": "^2.14.3",
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
-    "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "@nuxtjs/pwa": "^3.0.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.6.0",
+    "eslint": "^7.7.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "fibers": "^5.0.0",
     "nuxt-purgecss": "^1.0.0",
