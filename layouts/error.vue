@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import { APP_NAME } from '~/plugins/constants'
+
 export default {
   props: {
     error: {
@@ -19,7 +21,7 @@ export default {
   },
   head () {
     return {
-      title: `(#${this.error.statusCode}) ${this.error.message} · ${this.$app.name}`
+      title: `(#${this.error.statusCode}) ${this.error.message} · ${APP_NAME}`
     }
   }
 }

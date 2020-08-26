@@ -4,11 +4,11 @@
       <li
         v-for="(route, index) in routes"
         :key="index"
-        :aria-current="current(index) ? 'page' : null"
-        :class="{ active: current(index) }"
+        :aria-current="isCurrent(index) ? 'page' : null"
+        :class="{ active: isCurrent(index) }"
         class="breadcrumb-item"
       >
-        <template v-if="current(index)">
+        <template v-if="isCurrent(index)">
           {{ route.text }}
         </template>
         <template v-else>
@@ -20,6 +20,8 @@
 </template>
 
 <script>
+import { capitalize } from '~/plugins/format'
+
 export default {
   computed: {
     routes () {
@@ -33,12 +35,12 @@ export default {
       }
       return [
         home,
-        { name, text: this.$format.capitalize(name) }
+        { name, text: capitalize(name) }
       ]
     }
   },
   methods: {
-    current (index) {
+    isCurrent (index) {
       return this.routes.length === index + 1
     }
   }

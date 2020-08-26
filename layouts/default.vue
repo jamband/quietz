@@ -11,6 +11,9 @@
 </template>
 
 <script>
+import { APP_NAME, APP_DESCRIPTION } from '~/plugins/constants'
+import { capitalize } from '~/plugins/format'
+
 export default {
   computed: {
     hasRouteName () {
@@ -22,16 +25,16 @@ export default {
     headerTitle () {
       return this.isHome
         ? 'Home'
-        : this.$format.capitalize(this.$route.name)
+        : capitalize(this.$route.name || '')
     }
   },
   head () {
     const title = this.isHome || !this.hasRouteName
-      ? this.$app.name
-      : `${this.headerTitle} · ${this.$app.name}`
+      ? APP_NAME
+      : `${this.headerTitle} · ${APP_NAME}`
 
-    const description = /^(index|about|contact)$/.test(this.$route.name) || !this.hasRouteName
-      ? this.$app.description
+    const description = /^(index|about|contact)$/.test(this.$route.name || '') || !this.hasRouteName
+      ? APP_DESCRIPTION
       : `${this.headerTitle} example for Nuxt.js and Bootstrap 5`
 
     return {

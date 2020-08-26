@@ -21,8 +21,6 @@ export default {
     './assets/css/app.scss'
   ],
   plugins: [
-    './plugins/app',
-    './plugins/format'
   ],
   components: true,
   buildModules: [
