@@ -1,5 +1,5 @@
 <template>
-  <footer class="mt-5 py-3 text-center bg-light small">
+  <footer class="fixed-bottom py-3 text-center bg-light">
     <nav class="container" aria-label="Footer navigation">
       <ul class="list-inline mb-0">
         <li class="list-inline-item">

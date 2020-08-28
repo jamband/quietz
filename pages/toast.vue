@@ -40,6 +40,7 @@ export default {
 .toast {
   position: absolute;
   top: 1rem;
+  z-index: $zindex-toast;
 
   @media (max-width: $breakpoint-sm-down) {
     left: 0;

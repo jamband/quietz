@@ -4,6 +4,7 @@
       <li :class="disabledSelector('first')" class="flex-fill page-item">
         <NLink
           :to="pageLink(1)"
+          :aria-current-value="null"
           :aria-disabled="disabled('first')"
           :tabindex="disabled('first') ? -1 : 0"
           class="page-link"
@@ -15,6 +16,7 @@
       <li :class="disabledSelector('prev')" class="flex-fill page-item">
         <NLink
           :to="pageLink(currentPage - 1)"
+          :aria-current-value="null"
           :aria-disabled="disabled('prev')"
           :tabindex="disabled('prev') ? -1 : 0"
           class="page-link"
@@ -26,6 +28,7 @@
       <li :class="disabledSelector('next')" class="flex-fill page-item">
         <NLink
           :to="pageLink(currentPage + 1)"
+          :aria-current-value="null"
           :aria-disabled="disabled('next')"
           :tabindex="disabled('next') ? -1 : 0"
           class="page-link"
@@ -37,6 +40,7 @@
       <li :class="disabledSelector('last')" class="flex-fill page-item">
         <NLink
           :to="pageLink(pageCount)"
+          :aria-current-value="null"
           :aria-disabled="disabled('last')"
           :tabindex="disabled('last') ? -1 : 0"
           class="page-link"

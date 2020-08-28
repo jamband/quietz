@@ -1,9 +1,9 @@
 <template>
-  <div class="d-flex flex-column min-vh-100">
+  <div class="d-flex flex-column min-vh-100 py-7">
     <TheHeader />
     <TheBreadcrumb />
     <div class="container flex-grow-1">
-      <h1 v-if="hasRouteName">{{ headerTitle }}</h1>
+      <h1 v-if="hasRouteName">{{ title }}</h1>
       <Nuxt />
     </div>
     <TheFooter />
@@ -16,26 +16,29 @@ import { capitalize } from '~/plugins/format'
 
 export default {
   computed: {
+    routeName () {
+      return this.$route.name || ''
+    },
     hasRouteName () {
-      return this.$route.name !== null
+      return this.routeName !== ''
     },
     isHome () {
-      return this.$route.name === 'index'
+      return this.routeName === 'index'
     },
-    headerTitle () {
+    title () {
       return this.isHome
         ? 'Home'
-        : capitalize(this.$route.name || '')
+        : capitalize(this.routeName)
     }
   },
   head () {
     const title = this.isHome || !this.hasRouteName
       ? APP_NAME
-      : `${this.headerTitle} · ${APP_NAME}`
+      : `${this.title} · ${APP_NAME}`
 
-    const description = /^(index|about|contact)$/.test(this.$route.name || '') || !this.hasRouteName
+    const description = /^(index|about|contact)$/.test(this.routeName) || !this.hasRouteName
       ? APP_DESCRIPTION
-      : `${this.headerTitle} example for Nuxt.js and Bootstrap 5`
+      : `${this.title} example for Nuxt.js and Bootstrap 5`
 
     return {
       title,

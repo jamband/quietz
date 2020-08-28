@@ -1,5 +1,5 @@
 <template>
-  <header class="mb-1 py-3 text-center bg-light">
+  <header class="fixed-top py-3 text-center bg-light">
     <nav class="container" aria-label="Header navigation">
       <NLink :to="{ name: 'index' }" class="text-decoration-none">{{ app.name }}</NLink>
     </nav>

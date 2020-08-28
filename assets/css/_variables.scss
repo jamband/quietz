@@ -1,10 +1,9 @@
-// Bootstrap
-// https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
-
 @use "sass:color";
 @use "sass:map";
 
 // Color system
+$black:    #000;
+
 $primary:       #6b7279;
 
 $light:         #f8f9fa;
@@ -13,6 +12,21 @@ $light:         #f8f9fa;
 $enable-caret:                false;
 $enable-shadow:               true;
 $enable-validation-icons:     false;
+
+// Spacing
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 6,
+  8: $spacer * 7.5,
+  9: $spacer * 9
+);
 
 // Body
 $body-color:                $primary;
@@ -40,7 +54,7 @@ $container-max-widths: (
 );
 
 // Components
-$box-shadow-sm:               0 0.125rem 0.25rem color.scale(#000, $lightness: 0%, $alpha: -90%);
+$box-shadow-sm:               0 0.125rem 0.25rem color.scale($black, $lightness: 0%, $alpha: -90%);
 
 // Typography
 $font-family-sans-serif:      "Source Sans Pro", sans-serif;
@@ -52,12 +66,12 @@ $line-height-base:            1.65;
 
 $text-muted:                  color.scale($primary, $lightness: 90%);
 
-$list-inline-padding:         0.8rem;
+$mark-padding:                0;
 
-// Navbar
-$navbar-toggler-font-size:          $font-size-base;
+$list-inline-padding:         1rem;
 
-$navbar-light-toggler-border-color: none;
+// Z-index
+$zindex-toast:                    1080;
 
 // Dropdowns
 $dropdown-border-color:             none;

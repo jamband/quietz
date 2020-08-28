@@ -1,5 +1,5 @@
 <template>
-  <nav class="container mt-4" aria-label="Breadcrumb">
+  <nav class="container" aria-label="Breadcrumb">
     <ol class="breadcrumb">
       <li
         v-for="(route, index) in routes"

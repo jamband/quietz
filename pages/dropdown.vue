@@ -37,8 +37,8 @@
       <span
         v-for="(content, index) in contents"
         :key="index"
-        :class="{ 'text-muted': isUnmatchedCharacter(content) }"
-        class="pr-2"
+        :class="{ 'mark': isMatchedCharacter(content) }"
+        class="mr-2"
       >{{ content }}</span>
     </div>
   </div>
@@ -49,7 +49,7 @@ export default {
   data () {
     return {
       contents: [],
-      isMuted: false,
+      isMatched: false,
       searchValue: ''
     }
   },
@@ -69,14 +69,14 @@ export default {
       })
     },
     search (character) {
-      this.isMuted = true
+      this.isMatched = true
       this.searchValue = character
     },
-    isUnmatchedCharacter (content) {
-      return this.isMuted && content !== this.searchValue
+    isMatchedCharacter (content) {
+      return this.isMatched && content === this.searchValue
     },
     refresh () {
-      this.isMuted = false
+      this.isMatched = false
       this.contents = this.generateContents()
     }
   }
