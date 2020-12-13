@@ -5,8 +5,8 @@
       :key="image"
       :image="`${image}-thumb.jpg`"
       :text="image"
-      data-toggle="modal"
-      data-target="#modalImage"
+      data-bs-toggle="modal"
+      data-bs-target="#modalImage"
       @click.native="show(image)"
     />
     <div id="modalImage" class="modal fade" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">

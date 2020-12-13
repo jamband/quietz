@@ -1,13 +1,11 @@
 <template>
   <div>
-    <button type="button" class="btn btn-light shadow-sm" @click="show()">Show</button>
+    <button type="button" class="btn btn-primary" @click="show()">Show</button>
     <div :class="$style.toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header border-bottom-primary">
-        <strong class="mr-auto">Toast</strong>
+        <strong class="me-auto">Toast</strong>
         <small>from version 4.2</small>
-        <button type="button" class="ml-2 close" data-dismiss="toast" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" />
       </div>
       <div class="toast-body">
         Push notifications to your visitors with a toast,

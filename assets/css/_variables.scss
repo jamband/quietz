@@ -86,7 +86,9 @@ $pagination-bg:                     transparent;
 
 $pagination-border-color:           none;
 
-$pagination-hover-bg:               color.scale($light, $lightness: -20%, $alpha: -90%);
+$pagination-focus-bg:               color.scale($light, $lightness: -50%, $alpha: -90%);
+
+$pagination-hover-bg:               $pagination-focus-bg;
 
 $pagination-disabled-color:         color.scale($primary, $lightness: 75%);
 $pagination-disabled-bg:            transparent;

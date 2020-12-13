@@ -1,14 +1,12 @@
 <template>
   <div>
-    <div class="text-right">
-      <button type="button" class="btn btn-light shadow-sm" @click="reload()">Reload</button>
+    <div class="text-end">
+      <button type="button" class="btn btn-primary" @click="reload()">Reload</button>
     </div>
     <div class="alert alert-dismissible fade show my-3 bg-light shadow-sm" role="alert">
       <IconInfoCircleFill />
-      <span class="pl-1">{{ app.description }}.</span>
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
+      <span class="ps-1">{{ app.description }}.</span>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" />
     </div>
   </div>
 </template>

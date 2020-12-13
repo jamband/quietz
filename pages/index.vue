@@ -15,11 +15,11 @@ export default {
       routes: [
         { name: 'alert', text: 'Alert' },
         { name: 'collapse', text: 'Collapse' },
-        { name: 'embed', text: 'Embed' },
         { name: 'dropdown', text: 'Dropdown' },
         { name: 'modal', text: 'Modal' },
         { name: 'pagination', text: 'Pagination' },
         { name: 'progress', text: 'Progress' },
+        { name: 'ratio', text: 'Ratio' },
         { name: 'toast', text: 'Toast' }
       ]
     }

@@ -5,10 +5,10 @@
         id="dropdownSearchButton"
         class="btn dropdown-toggle"
         type="button"
-        data-toggle="dropdown"
+        data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        <span class="pr-1">Search</span>
+        <span class="pe-1">Search</span>
         <IconChevronDown />
       </button>
       <ul class="dropdown-menu shadow-sm bg-light" aria-labelledby="dropdownSearchButton">
@@ -38,7 +38,7 @@
         v-for="(content, index) in contents"
         :key="index"
         :class="{ 'mark': isMatchedCharacter(content) }"
-        class="mr-2"
+        class="me-2"
       >{{ content }}</span>
     </div>
   </div>
