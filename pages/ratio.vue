@@ -38,7 +38,14 @@ export default {
   },
   methods: {
     setRatioSelector (ratio) {
-      this.ratioSelector = `ratio-${ratio}`
+      const { selector } = [
+        { ratio: '21x9', selector: 'ratio-21x9' },
+        { ratio: '16x9', selector: 'ratio-16x9' },
+        { ratio: '4x3', selector: 'ratio-4x3' },
+        { ratio: '1x1', selector: 'ratio-1x1' }
+      ].find(_ => _.ratio === ratio)
+
+      this.ratioSelector = selector
     }
   }
 }
