@@ -7,7 +7,11 @@
     </p>
     <p>
       This website is an open source project. See
-      <a :href="app.repositoryUrl" rel="noopener" target="_blank">GitHub {{ app.repositoryName }}</a>
+      <a
+        :href="app.repositoryUrl"
+        rel="noopener"
+        target="_blank"
+      ><IconGitHub style="margin-right: 3px;" />GitHub {{ app.repositoryName }}</a>
       for details.
     </p>
   </div>
