@@ -16,6 +16,7 @@ export default {
         { name: 'alert', text: 'Alert' },
         { name: 'collapse', text: 'Collapse' },
         { name: 'dropdown', text: 'Dropdown' },
+        { name: 'form', text: 'Form' },
         { name: 'modal', text: 'Modal' },
         { name: 'pagination', text: 'Pagination' },
         { name: 'progress', text: 'Progress' },

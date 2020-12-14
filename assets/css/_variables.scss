@@ -2,16 +2,19 @@
 @use "sass:map";
 
 // Color system
-$black:    #000;
+$black:     #000;
+$red:       #bf616a;
+$green:     #a3be8c;
 
 $primary:       #6b7279;
 
+$success:       $green;
+$danger:        $red;
 $light:         #f8f9fa;
 
 // Options
 $enable-caret:                false;
 $enable-shadow:               true;
-$enable-validation-icons:     false;
 
 // Spacing
 $spacer: 1rem;
@@ -69,6 +72,9 @@ $text-muted:                  color.scale($primary, $lightness: 90%);
 $mark-padding:                0;
 
 $list-inline-padding:         1rem;
+
+// Forms
+$input-placeholder-color:               color.scale($primary, $lightness: 70%);
 
 // Z-index
 $zindex-toast:                    1080;
