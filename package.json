@@ -13,10 +13,11 @@
     "nuxt": "^2.15.3"
   },
   "devDependencies": {
+    "@babel/core": "^7.13.13",
+    "@babel/eslint-parser": "^7.13.10",
     "@nuxtjs/eslint-config": "^6.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/pwa": "^3.3.5",
-    "babel-eslint": "^10.1.0",
     "eslint": "^7.23.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "fibers": "^5.0.0",
