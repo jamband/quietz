@@ -34,6 +34,8 @@ $theme-colors: (
 @import "~bootstrap/scss/transitions";
 @import "~bootstrap/scss/dropdown";
 @import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
 @import "~bootstrap/scss/breadcrumb";
 @import "~bootstrap/scss/pagination";
 @import "~bootstrap/scss/alert";
@@ -42,6 +44,7 @@ $theme-colors: (
 @import "~bootstrap/scss/toasts";
 @import "~bootstrap/scss/modal";
 @import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/offcanvas";
 
 // Helpers
 @import "~bootstrap/scss/helpers/position";

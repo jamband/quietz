@@ -19,6 +19,7 @@ export default {
         { name: 'form', text: 'Form' },
         { name: 'modal', text: 'Modal' },
         { name: 'pagination', text: 'Pagination' },
+        { name: 'offcanvas', text: 'Offcanvas' },
         { name: 'progress', text: 'Progress' },
         { name: 'ratio', text: 'Ratio' },
         { name: 'toast', text: 'Toast' }
