@@ -53,6 +53,7 @@ export default {
   purgeCSS: {
     // enabled: true,
     paths: [
+      './icons/**/*.vue',
       './node_modules/bootstrap/dist/js/bootstrap.js'
     ],
     extractors: () => []
