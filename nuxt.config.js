@@ -22,7 +22,10 @@ export default {
   ],
   plugins: [
   ],
-  components: true,
+  components: [
+    { path: '~/components', pathPrefix: false },
+    { path: '~/icons', pathPrefix: false }
+  ],
   buildModules: [
     '@nuxtjs/pwa',
     'nuxt-purgecss'
