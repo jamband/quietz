@@ -10,7 +10,7 @@
           class="page-link"
           aria-label="First"
         >
-          <IconChevronDoubleLeft class="w-3 h-3" />
+          <IconChevronDoubleLeft size="0.8em" />
         </NLink>
       </li>
       <li :class="disabledSelector('prev')" class="flex-fill page-item">
@@ -22,7 +22,7 @@
           class="page-link"
           aria-label="Previous"
         >
-          <IconChevronLeft class="w-3 h-3" />
+          <IconChevronLeft size="0.8em" />
         </NLink>
       </li>
       <li :class="disabledSelector('next')" class="flex-fill page-item">
@@ -34,7 +34,7 @@
           class="page-link"
           aria-label="Next"
         >
-          <IconChevronRight class="w-3 h-3" />
+          <IconChevronRight size="0.8em" />
         </NLink>
       </li>
       <li :class="disabledSelector('last')" class="flex-fill page-item">
@@ -46,7 +46,7 @@
           class="page-link"
           aria-label="Last"
         >
-          <IconChevronDoubleRight class="w-3 h-3" />
+          <IconChevronDoubleRight size="0.8em" />
         </NLink>
       </li>
     </ul>

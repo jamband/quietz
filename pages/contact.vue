@@ -6,12 +6,12 @@
         href="https://twitter.com/livejam_db"
         rel="noopener"
         target="_blank"
-      ><IconTwitter style="margin-right: 2px;" />Twitter</a> or
+      ><IconTwitter /> Twitter</a> or
       <a
         :href="`${app.repositoryUrl}/issues`"
         rel="noopener"
         target="_blank"
-      ><IconGitHub style="margin-right: 3px;" />GitHub Issues</a>.
+      ><IconGitHub /> GitHub Issues</a>.
     </p>
   </div>
 </template>

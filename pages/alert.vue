@@ -5,7 +5,7 @@
     </div>
     <div class="alert alert-dismissible fade show my-3 bg-light shadow-sm" role="alert">
       <IconInfoCircleFill />
-      <span class="ps-1">{{ app.description }}.</span>
+      {{ app.description }}
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" />
     </div>
   </div>

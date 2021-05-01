@@ -9,7 +9,7 @@
         aria-expanded="false"
       >
         <span class="pe-1">Search</span>
-        <IconChevronDown />
+        <IconChevronDown size="0.8em" />
       </button>
       <ul class="dropdown-menu shadow-sm bg-light" aria-labelledby="dropdownSearchButton">
         <li>

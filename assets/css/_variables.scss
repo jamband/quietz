@@ -12,12 +12,23 @@ $success:       $green;
 $danger:        $red;
 $light:         #f8f9fa;
 
+$colors: (
+);
+
+$theme-colors: (
+  "primary":    $primary,
+  "success":    $success,
+  "danger":     $danger,
+  "light":      $light,
+);
+
 // Options
 $enable-caret:                false;
 $enable-shadow:               true;
 
 // Spacing
 $spacer: 1rem;
+
 $spacers: (
   0: 0,
   1: $spacer / 4,

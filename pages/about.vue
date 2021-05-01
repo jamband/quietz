@@ -11,7 +11,7 @@
         :href="app.repositoryUrl"
         rel="noopener"
         target="_blank"
-      ><IconGitHub style="margin-right: 3px;" />GitHub {{ app.repositoryName }}</a>
+      ><IconGitHub /> GitHub {{ app.repositoryName }}</a>
       for details.
     </p>
   </div>

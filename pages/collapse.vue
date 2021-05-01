@@ -2,7 +2,7 @@
   <div>
     <button
       type="button"
-      class="btn btn-primary btn-sm w-24"
+      class="btn btn-primary btn-sm w-25"
       data-bs-toggle="collapse"
       data-bs-target="#collapseExample"
       aria-expanded="false"
@@ -14,7 +14,7 @@
     <div id="collapseExample" class="collapse mt-3">
       <div class="p-3 shadow-sm bg-light rounded">
         <IconInfoCircleFill />
-        <span class="ps-1">Toggle the visibility of content across your project.</span>
+        Toggle the visibility of content across your project.
       </div>
     </div>
   </div>
