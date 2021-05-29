@@ -34,19 +34,20 @@ export default {
 
 <style lang="scss" module>
 @import "../assets/css/variables";
+@import "../node_modules/bootstrap/scss/mixins/breakpoints";
 
 .toast {
   position: absolute;
   top: 1rem;
   z-index: $zindex-toast;
 
-  @media (max-width: $breakpoint-sm-down) {
+  @include media-breakpoint-down(sm) {
     left: 0;
     margin: auto;
     right: 0;
   }
 
-  @media (min-width: $breakpoint-sm) {
+  @include media-breakpoint-up(sm) {
     right: 1rem;
   }
 }
