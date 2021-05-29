@@ -3,9 +3,6 @@
     <div v-if="$fetchState.pending" class="text-center">
       <AppLoading />
     </div>
-    <div v-else-if="$fetchState.error" class="text-center">
-      Request failure.
-    </div>
     <div v-else>
       <p class="text-center">
         {{ content }}
@@ -22,8 +19,8 @@ export default {
       content: ''
     }
   },
-  async fetch () {
-    this.content = await '.'.repeat(this.currentPage)
+  fetch () {
+    this.content = '.'.repeat(this.currentPage)
   },
   fetchDelay: 500,
   computed: {
