@@ -15,22 +15,6 @@ import { APP_NAME, APP_DESCRIPTION } from '~/plugins/constants'
 import { capitalize } from '~/plugins/format'
 
 export default {
-  computed: {
-    routeName () {
-      return this.$route.name || ''
-    },
-    hasRouteName () {
-      return this.routeName !== ''
-    },
-    isHome () {
-      return this.routeName === 'index'
-    },
-    title () {
-      return this.isHome
-        ? 'Home'
-        : capitalize(this.routeName)
-    }
-  },
   head () {
     const title = this.isHome || !this.hasRouteName
       ? APP_NAME
@@ -47,6 +31,20 @@ export default {
         { hid: 'og:title', property: 'og:title', content: title },
         { hid: 'og:description', property: 'og:description', content: description }
       ]
+    }
+  },
+  computed: {
+    routeName () {
+      return this.$route.name || ''
+    },
+    hasRouteName () {
+      return this.routeName !== ''
+    },
+    isHome () {
+      return this.routeName === 'index'
+    },
+    title () {
+      return this.isHome ? 'Home' : capitalize(this.routeName)
     }
   }
 }

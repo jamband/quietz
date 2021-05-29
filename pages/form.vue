@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="my-3 display-4 text-center">
+    <div class="my-3 display-5 text-center">
       {{ code }}
       <button type="button" class="btn btn-link" @click="refreshCode()">
         Refresh

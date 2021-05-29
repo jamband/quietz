@@ -1,8 +1,7 @@
 <template>
   <div>
     <h1>#{{ error.statusCode }}</h1>
-    <IconInfoCircleFill />
-    <span class="pl-1">{{ error.message }}.</span>
+    <IconInfoCircleFill /> {{ error.message }}.
     <p class="mt-5 text-center">
       <NLink :to="{ name: 'index' }">Back to Home</NLink>
     </p>
@@ -21,7 +20,7 @@ export default {
   },
   head () {
     return {
-      title: `(#${this.error.statusCode}) ${this.error.message} · ${APP_NAME}`
+      title: `${this.error.message} · ${APP_NAME}`
     }
   }
 }

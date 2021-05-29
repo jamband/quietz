@@ -3,7 +3,7 @@
     <div class="dropdown">
       <button
         id="dropdownSearchButton"
-        class="btn dropdown-toggle"
+        class="btn"
         type="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
