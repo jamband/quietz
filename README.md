@@ -12,8 +12,7 @@
 
 ## Related repositories
 
-- [jamband/quiet-boatz](https://github.com/jamband/quiet-boatz) - Vue.js 3 + Bootstrap 5
-- [jamband/quiet-nextz](https://github.com/jamband/quiet-nextz) - Next.js + Bootstrap 5
+- [jamband/suerte](https://github.com/jamband/suerte) - Next.js + Bootstrap 5
 
 ## License
 
