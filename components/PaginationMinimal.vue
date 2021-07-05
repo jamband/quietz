@@ -1,56 +1,52 @@
 <template>
   <nav class="text-center" aria-label="Page navigation">
-    <ul class="pagination d-flex">
-      <li :class="disabledSelector('first')" class="flex-fill page-item">
+    <ul class="pagination">
+      <li :class="itemClass('first')">
         <NLink
-          :to="pageLink(1)"
-          :aria-current-value="null"
-          :aria-disabled="disabled('first')"
-          :tabindex="disabled('first') ? -1 : 0"
+          :to="link('first')"
           class="page-link"
           aria-label="First"
+          :aria-disabled="disabled('first')"
+          :tabindex="disabled('first') ? -1 : 0"
         >
           <IconChevronDoubleLeft size="0.8em" />
         </NLink>
       </li>
-      <li :class="disabledSelector('prev')" class="flex-fill page-item">
+      <li :class="itemClass('previous')">
         <NLink
-          :to="pageLink(currentPage - 1)"
-          :aria-current-value="null"
-          :aria-disabled="disabled('prev')"
-          :tabindex="disabled('prev') ? -1 : 0"
+          :to="link('previous')"
           class="page-link"
+          :aria-disabled="disabled('previous')"
           aria-label="Previous"
+          :tabindex="disabled('previous') ? -1 : 0"
         >
           <IconChevronLeft size="0.8em" />
         </NLink>
       </li>
-      <li :class="disabledSelector('next')" class="flex-fill page-item">
+      <li :class="itemClass('next')">
         <NLink
-          :to="pageLink(currentPage + 1)"
-          :aria-current-value="null"
-          :aria-disabled="disabled('next')"
-          :tabindex="disabled('next') ? -1 : 0"
+          :to="link('next')"
           class="page-link"
           aria-label="Next"
+          :aria-disabled="disabled('next')"
+          :tabindex="disabled('next') ? -1 : 0"
         >
           <IconChevronRight size="0.8em" />
         </NLink>
       </li>
-      <li :class="disabledSelector('last')" class="flex-fill page-item">
+      <li :class="itemClass('last')">
         <NLink
-          :to="pageLink(pageCount)"
-          :aria-current-value="null"
-          :aria-disabled="disabled('last')"
-          :tabindex="disabled('last') ? -1 : 0"
+          :to="link('last')"
           class="page-link"
           aria-label="Last"
+          :aria-disabled="disabled('last')"
+          :tabindex="disabled('last') ? -1 : 0"
         >
           <IconChevronDoubleRight size="0.8em" />
         </NLink>
       </li>
     </ul>
-    <div :class="$style.information" aria-label="Page Information">
+    <div :class="$style.information" aria-label="Page information">
       {{ currentPage }}/{{ pageCount }}
     </div>
   </nav>
@@ -70,16 +66,30 @@ export default {
   },
   methods: {
     disabled (part) {
-      if (/^(first|prev)$/.test(part)) {
-        return this.currentPage < 2
-      } else {
-        return this.currentPage >= this.pageCount
+      return ['first', 'previous'].includes(part)
+        ? this.currentPage < 2
+        : this.currentPage >= this.pageCount
+    },
+    itemClass (part) {
+      let selector = 'page-item flex-fill'
+      if (this.disabled(part)) {
+        selector += ' disabled'
       }
+      return selector
     },
-    disabledSelector (part) {
-      return this.disabled(part) ? 'disabled' : ''
-    },
-    pageLink (page) {
+    link (part) {
+      let page = 1
+
+      if (part === 'previous' && this.currentPage > 1) {
+        page = this.currentPage - 1
+      } else if (part === 'next' && this.currentPage === this.pageCount) {
+        page = this.pageCount
+      } else if (part === 'next' && this.currentPage !== this.pageCount) {
+        page = this.currentPage + 1
+      } else if (part === 'last') {
+        page = this.pageCount
+      }
+
       return { query: { page } }
     }
   }
