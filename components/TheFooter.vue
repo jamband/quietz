@@ -3,13 +3,13 @@
     <nav class="container" aria-label="Footer navigation">
       <ul class="list-inline mb-0">
         <li class="list-inline-item">
-          <a :href="app.repositoryUrl" rel="noopener" target="_blank">GitHub</a>
+          <NLink :to="{ name: 'about' }">About</NLink>
         </li>
         <li class="list-inline-item">
           <NLink :to="{ name: 'contact' }">Contact</NLink>
         </li>
         <li class="list-inline-item">
-          <NLink :to="{ name: 'about' }">About</NLink>
+          <a :href="app.repositoryUrl" rel="noopener" target="_blank">GitHub</a>
         </li>
       </ul>
     </nav>
