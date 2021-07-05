@@ -67,6 +67,7 @@ $font-size-sm:                $font-size-base * 0.875;
 $line-height-base:            1.65;
 $text-muted:                  color.scale($primary, $lightness: 90%);
 $mark-padding:                0;
+$mark-bg:                     orange;
 $list-inline-padding:         1rem;
 
 // Forms

@@ -6,6 +6,7 @@
         class="btn"
         type="button"
         data-bs-toggle="dropdown"
+        data-bs-offset="-3,5"
         aria-expanded="false"
       >
         <span class="pe-1">Search</span>
