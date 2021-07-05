@@ -11,26 +11,30 @@
     </button>
     <div
       id="offcanvasExample"
-      class="offcanvas offcanvas-end"
+      class="navbar-nav offcanvas offcanvas-end"
       tabIndex="-1"
       aria-labelledby="offcanvasExampleLabel"
     >
-      <div class="offcanvas-header">
-        <h5 id="offcanvasExampleLabel">Pages</h5>
+      <div class="offcanvas-header bg-light">
+        <h5 id="offcanvasExampleLabel" class="offcanvas-title">Pages</h5>
         <button
           type="button"
-          class="btn-close text-reset"
+          class="me-1 btn-close"
           data-bs-dismiss="offcanvas"
           aria-label="Close"
         />
       </div>
-      <ul class="list-unstyled">
-        <li v-for="route in routes" :key="route.name" class="nav-item">
-          <NLink :to="{ name: route.name }" class="nav-link" data-bs-dismiss="offcanvas">
-            {{ route.text }}
-          </NLink>
-        </li>
-      </ul>
+      <div class="offcanvas-body">
+        <NLink
+          v-for="route in routes"
+          :key="route.name"
+          :to="{ name: route.name }"
+          class="nav-link"
+          data-bs-dismiss="offcanvas"
+        >
+          {{ route.text }}
+        </NLink>
+      </div>
     </div>
   </div>
 </template>

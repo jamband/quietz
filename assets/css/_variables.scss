@@ -109,5 +109,7 @@ $breadcrumb-divider-color:          color.scale($primary, $lightness: 65%);
 $breadcrumb-active-color:           color.scale($primary, $lightness: 45%);
 
 // Offcanvas
+$offcanvas-padding-y:               0.8rem;
+$offcanvas-padding-x:               0.8rem;
 $offcanvas-border-width:            0;
-$offcanvas-bg-color:                $light;
+$offcanvas-bg-color:                white;
