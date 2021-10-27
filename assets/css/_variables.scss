@@ -6,10 +6,8 @@ $primary:       #6b7279;
 $success:       #a3be8c;
 $danger:        #bf616a;
 $light:         #f8f9fa;
-
 $colors: (
 );
-
 $theme-colors: (
   "primary":    $primary,
   "success":    $success,
@@ -24,7 +22,6 @@ $enable-smooth-scroll:        false;
 
 // Spacing
 $spacer: 1rem;
-
 $spacers: (
   0: 0,
   1: $spacer * 0.25,

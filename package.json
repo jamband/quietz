@@ -5,7 +5,7 @@
     "generate": "nuxt generate",
     "start": "nuxt start",
     "lint": "eslint --ext .js,.vue .",
-    "stylelint": "stylelint **/*.{css,scss}",
+    "stylelint": "stylelint \"**/*.{css,scss,vue}\"",
     "clear": "rm -rf .nuxt dist",
     "clean": "rm -rf .nuxt dist node_modules"
   },
@@ -23,11 +23,14 @@
     "eslint-plugin-nuxt": "^3.0.0",
     "fibers": "^5.0.0",
     "nuxt-purgecss": "^1.0.0",
+    "postcss": "^8.3.11",
+    "postcss-html": "^1.1.1",
+    "postcss-scss": "^4.0.1",
     "sass": "^1.43.4",
     "sass-loader": "^10.2.0",
-    "stylelint": "^13.13.1",
-    "stylelint-config-standard": "^22.0.0",
-    "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.21.0"
+    "stylelint": "^14.0.1",
+    "stylelint-config-recommended-vue": "^1.0.0",
+    "stylelint-config-standard-scss": "^2.0.0",
+    "stylelint-order": "^5.0.0"
   }
 }
