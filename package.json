@@ -4,7 +4,7 @@
     "dev": "nuxt",
     "generate": "nuxt generate",
     "start": "nuxt start",
-    "eslint": "eslint . --ext .js,.vue",
+    "lint": "eslint --ext .js,.vue .",
     "stylelint": "stylelint **/*.{css,scss}",
     "clear": "rm -rf .nuxt dist",
     "clean": "rm -rf .nuxt dist node_modules"
@@ -16,11 +16,11 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.15.8",
-    "@nuxtjs/eslint-config": "^6.0.1",
+    "@nuxtjs/eslint-config": "^7.0.0",
     "@types/bootstrap": "^5.1.6",
     "babel-core": "^7.0.0-bridge.0",
-    "eslint": "^7.32.0",
-    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint": "^8.1.0",
+    "eslint-plugin-nuxt": "^3.0.0",
     "fibers": "^5.0.0",
     "nuxt-purgecss": "^1.0.0",
     "sass": "^1.43.4",
