@@ -20,6 +20,7 @@ export default {
     { path: '~/icons', pathPrefix: false }
   ],
   buildModules: [
+    '@nuxt/postcss8',
     'nuxt-purgecss'
   ],
   messages: {
