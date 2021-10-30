@@ -25,15 +25,16 @@
         />
       </div>
       <div class="offcanvas-body">
-        <NLink
-          v-for="route in routes"
-          :key="route.name"
-          :to="{ name: route.name }"
-          class="nav-link"
-          data-bs-dismiss="offcanvas"
-        >
-          {{ route.text }}
-        </NLink>
+        <div data-bs-dismiss="offcanvas">
+          <NLink
+            v-for="route in routes"
+            :key="route.name"
+            :to="{ name: route.name }"
+            class="nav-link"
+          >
+            {{ route.text }}
+          </NLink>
+        </div>
       </div>
     </div>
   </div>
