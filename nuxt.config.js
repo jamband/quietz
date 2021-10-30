@@ -15,10 +15,7 @@ export default {
   ],
   plugins: [
   ],
-  components: [
-    { path: '~/components', pathPrefix: false },
-    { path: '~/icons', pathPrefix: false }
-  ],
+  components: true,
   buildModules: [
     '@nuxt/postcss8',
     'nuxt-purgecss'
@@ -37,7 +34,6 @@ export default {
   purgeCSS: {
     // enabled: true,
     paths: [
-      './icons/**/*.vue',
       './node_modules/bootstrap/dist/js/bootstrap.js'
     ],
     extractors: () => []
