@@ -1,4 +1,5 @@
 export default {
+  srcDir: 'src/',
   ssr: true,
   target: 'static',
   head: {
@@ -32,9 +33,14 @@ export default {
   },
   // top level options for packages
   purgeCSS: {
-    // enabled: true,
     paths: [
-      './node_modules/bootstrap/dist/js/bootstrap.js'
+      '../node_modules/bootstrap/js/dist/alert.js',
+      '../node_modules/bootstrap/js/dist/button.js',
+      '../node_modules/bootstrap/js/dist/collapse.js',
+      '../node_modules/bootstrap/js/dist/dropdown.js',
+      '../node_modules/bootstrap/js/dist/modal.js',
+      '../node_modules/bootstrap/js/dist/offcanvas.js',
+      '../node_modules/bootstrap/js/dist/toast.js'
     ],
     extractors: () => []
   }

@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { APP_NAME, APP_REPOSITORY_URL, APP_REPOSITORY_NAME } from '~/plugins/constants'
+import { APP_NAME, APP_REPOSITORY_NAME, APP_REPOSITORY_URL } from '~/plugins/constants'
 
 export default {
   data () {

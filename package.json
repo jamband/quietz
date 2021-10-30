@@ -5,7 +5,7 @@
     "generate": "nuxt generate",
     "start": "nuxt start",
     "lint": "eslint --ext .js,.vue .",
-    "stylelint": "stylelint \"**/*.{css,scss,vue}\"",
+    "stylelint": "stylelint \"src/**/*.{css,scss,vue}\"",
     "clear": "rm -rf .nuxt dist",
     "clean": "rm -rf .nuxt dist node_modules"
   },

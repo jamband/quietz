@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { APP_NAME, APP_DESCRIPTION } from '~/plugins/constants'
+import { APP_DESCRIPTION, APP_NAME } from '~/plugins/constants'
 import { capitalize } from '~/plugins/format'
 
 export default {
