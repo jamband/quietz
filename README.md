@@ -12,6 +12,7 @@
 
 ## Related repositories
 
+- [jamband/blissable](https://github.com/jamband/blissable) - SvelteKit + Bootstrap 5
 - [jamband/suerte](https://github.com/jamband/suerte) - Next.js + Bootstrap 5
 
 ## License
