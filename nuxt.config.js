@@ -1,3 +1,5 @@
+import purgecssConfig from './purgecss.config'
+
 export default {
   srcDir: 'src/',
   ssr: true,
@@ -23,6 +25,11 @@ export default {
   },
   build: {
     // analyze: true
+    postcss: {
+      plugins: {
+        '@fullhuman/postcss-purgecss': purgecssConfig
+      }
+    }
   },
   generate: {
     fallback: '404.html',
