@@ -23,7 +23,6 @@
     "eslint": "^8.1.0",
     "eslint-plugin-nuxt": "^3.0.0",
     "fibers": "^5.0.0",
-    "nuxt-purgecss": "^1.0.0",
     "postcss": "^8.3.11",
     "postcss-html": "^1.2.0",
     "postcss-scss": "^4.0.2",

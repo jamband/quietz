@@ -17,10 +17,7 @@ export default {
   plugins: [
   ],
   components: true,
-  buildModules: [
-    '@nuxt/postcss8',
-    'nuxt-purgecss'
-  ],
+  buildModules: ['@nuxt/postcss8'],
   messages: {
     error_404: 'Page not found'
   },
@@ -30,18 +27,6 @@ export default {
   generate: {
     fallback: '404.html',
     routes: ['/']
-  },
-  // top level options for packages
-  purgeCSS: {
-    paths: [
-      '../node_modules/bootstrap/js/dist/alert.js',
-      '../node_modules/bootstrap/js/dist/button.js',
-      '../node_modules/bootstrap/js/dist/collapse.js',
-      '../node_modules/bootstrap/js/dist/dropdown.js',
-      '../node_modules/bootstrap/js/dist/modal.js',
-      '../node_modules/bootstrap/js/dist/offcanvas.js',
-      '../node_modules/bootstrap/js/dist/toast.js'
-    ],
-    extractors: () => []
   }
+  // top level options for packages
 }
