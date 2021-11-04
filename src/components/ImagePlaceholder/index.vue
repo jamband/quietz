@@ -21,7 +21,7 @@ const props = withDefaults(defineProps<Props>(), {
     aria-label="Placeholder: Image cap"
     preserveAspectRatio="xMidYMid slice"
     focusable="false"
-    :style="`font-size: ${props.textSize};`"
+    :style="{ fontSize: props.textSize }"
   >
     <title>Placeholder</title>
     <rect width="100%" height="100%" :fill="props.rectFill" />
