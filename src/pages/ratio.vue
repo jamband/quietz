@@ -30,7 +30,7 @@ const setRatio = (value: Ratio) => (ratio.value = value);
     </div>
     <div class="ratio" :class="`ratio-${ratio}`">
       <ImagePlaceholder
-        :text="ratio"
+        :text="ratio || ''"
         text-size="5em"
         text-fill="#6b7279"
         rect-fill="#bec7ce"
