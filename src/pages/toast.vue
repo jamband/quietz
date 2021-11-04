@@ -38,7 +38,7 @@ const show = () => {
       Show Current Time
     </button>
     <div class="alert my-3 bg-light shadow-sm">
-      <IconInfoCircleFill size="1em" />
+      <IconInfoCircleFill />
       This notification will continue to be displayed for a certain period of
       time no matter which page you go to.
     </div>

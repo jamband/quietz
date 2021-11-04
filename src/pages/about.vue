@@ -14,7 +14,10 @@ import {
       {{ APP_NAME }} is my private playground for
       <LinkExternal href="https://nuxtjs.org">Nuxt.js</LinkExternal>
       and
-      <LinkExternal href="https://getbootstrap.com">Bootstrap 5</LinkExternal>.
+      <LinkExternal href="https://getbootstrap.com">
+        <IconBootstrapFill />
+        Bootstrap 5</LinkExternal
+      >.
     </p>
     <p>
       This website is an open source project. See
