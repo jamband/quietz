@@ -1,38 +1,27 @@
+<script setup lang="ts">
+const route = useRoute();
+const content = ref(".");
+const currentPage = ref(1);
+const isLoading = ref(false);
+
+watchEffect(() => {
+  currentPage.value = Number(route.query.page) || 1;
+  content.value = ".".repeat(currentPage.value);
+  isLoading.value = true;
+  setTimeout(() => (isLoading.value = false), 500);
+});
+</script>
+
 <template>
   <div>
-    <div v-if="$fetchState.pending" class="text-center">
+    <ThePage title="Pagination"></ThePage>
+    <h1>Pagination</h1>
+    <div v-if="isLoading" class="text-center">
       <AppLoading />
     </div>
     <div v-else>
-      <p class="text-center">
-        {{ content }}
-      </p>
-      <PaginationMinimal :current-page="currentPage" :page-count="pageCount" />
+      <p class="text-center">{{ content }}</p>
+      <PaginationMinimal :current-page="currentPage" :page-count="26" />
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data () {
-    return {
-      content: ''
-    }
-  },
-  fetch () {
-    this.content = '.'.repeat(this.currentPage)
-  },
-  fetchDelay: 500,
-  computed: {
-    currentPage () {
-      return Number(this.$route.query.page) || 1
-    },
-    pageCount () {
-      return 26
-    }
-  },
-  watch: {
-    '$route.query': '$fetch'
-  }
-}
-</script>

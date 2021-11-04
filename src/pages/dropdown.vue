@@ -1,5 +1,37 @@
+<script setup lang="ts">
+import { generateContents } from "~/utils/string";
+
+type Character = "A" | "B" | "C";
+
+useDropdown();
+const contents = ref([""]);
+const isMatched = ref(false);
+const searchValue = ref("");
+const characters: Array<Character> = ["A", "B", "C"];
+
+const search = (character: Character) => {
+  isMatched.value = true;
+  searchValue.value = character;
+};
+
+const isMatchedCharacter = (content: string) => {
+  return isMatched.value && content === searchValue.value;
+};
+
+const refresh = () => {
+  isMatched.value = false;
+  contents.value = generateContents(characters);
+};
+
+onMounted(() => {
+  contents.value = generateContents(characters);
+});
+</script>
+
 <template>
   <div>
+    <ThePage title="Dropdown"></ThePage>
+    <h1>Dropdown</h1>
     <div class="dropdown">
       <button
         id="dropdownSearchButton"
@@ -12,7 +44,10 @@
         <span class="pe-1">Search</span>
         <IconChevronDown size="0.8em" />
       </button>
-      <ul class="dropdown-menu shadow-sm bg-light" aria-labelledby="dropdownSearchButton">
+      <ul
+        class="dropdown-menu shadow-sm bg-light"
+        aria-labelledby="dropdownSearchButton"
+      >
         <li>
           <button
             type="button"
@@ -22,7 +57,7 @@
             Refresh
           </button>
         </li>
-        <li><hr class="dropdown-divider"></li>
+        <li><hr class="dropdown-divider" /></li>
         <li v-for="(character, index) in characters" :key="index">
           <button
             type="button"
@@ -38,48 +73,10 @@
       <span
         v-for="(content, index) in contents"
         :key="index"
-        :class="{ 'mark': isMatchedCharacter(content) }"
-        class="me-2"
-      >{{ content }}</span>
+        :class="{ mark: isMatchedCharacter(content) }"
+        class="me-2 p-1 fw-bold font-monospace"
+        >{{ content }}</span
+      >
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data () {
-    return {
-      contents: [],
-      isMatched: false,
-      searchValue: ''
-    }
-  },
-  computed: {
-    characters () {
-      return ['a', 'b', 'c']
-    }
-  },
-  mounted () {
-    import('bootstrap/js/dist/dropdown')
-    this.contents = this.generateContents()
-  },
-  methods: {
-    generateContents () {
-      return [...Array(15)].map(() => {
-        return this.characters[Math.floor(Math.random() * Math.floor(3))]
-      })
-    },
-    search (character) {
-      this.isMatched = true
-      this.searchValue = character
-    },
-    isMatchedCharacter (content) {
-      return this.isMatched && content === this.searchValue
-    },
-    refresh () {
-      this.isMatched = false
-      this.contents = this.generateContents()
-    }
-  }
-}
-</script>

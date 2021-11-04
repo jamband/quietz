@@ -1,17 +1,24 @@
+<script setup lang="ts">
+const { collapseRef, disabled, isCollapsed, toggleCollapse } = useCollapse();
+</script>
+
 <template>
   <div>
+    <ThePage title="Collapse"></ThePage>
+    <h1>Collapse</h1>
     <button
+      :disabled="disabled"
       type="button"
       class="btn btn-primary btn-sm w-25"
       data-bs-toggle="collapse"
       data-bs-target="#collapseExample"
       aria-expanded="false"
       aria-controls="collapse"
-      @click="toggleButtonText()"
+      @click="toggleCollapse()"
     >
-      {{ buttonText }}
+      {{ isCollapsed ? "Show" : "Hide" }}
     </button>
-    <div id="collapseExample" class="collapse mt-3">
+    <div id="collapseExample" ref="collapseRef" class="collapse mt-3">
       <div class="p-3 shadow-sm bg-light rounded">
         <IconInfoCircleFill />
         Toggle the visibility of content across your project.
@@ -19,23 +26,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data () {
-    return {
-      buttonText: 'Show'
-    }
-  },
-  mounted () {
-    import('bootstrap/js/dist/collapse')
-  },
-  methods: {
-    toggleButtonText () {
-      this.buttonText = this.buttonText === 'Show'
-        ? 'Hide'
-        : 'Show'
-    }
-  }
-}
-</script>

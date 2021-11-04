@@ -1,5 +1,14 @@
+<script setup lang="ts">
+useModal();
+const src = ref("");
+const images = ["boat", "city", "butterfly"];
+const show = (image: string) => (src.value = image);
+</script>
+
 <template>
   <div>
+    <ThePage title="Modal"></ThePage>
+    <h1>Modal</h1>
     <ImageBadge
       v-for="image in images"
       :key="image"
@@ -7,31 +16,18 @@
       :text="image"
       data-bs-toggle="modal"
       data-bs-target="#modalImage"
-      @click.native="show(image)"
+      @click="show(image)"
     />
-    <div id="modalImage" class="modal fade" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div
+      id="modalImage"
+      class="modal fade"
+      tabindex="-1"
+      aria-labelledby="ModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-lg text-center">
-        <img :src="src" class="img-fluid rounded">
+        <img :src="`/images/${src}.jpg`" class="img-fluid rounded" />
       </div>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data () {
-    return {
-      src: '',
-      images: ['boat', 'city', 'butterfly']
-    }
-  },
-  mounted () {
-    import('bootstrap/js/dist/modal')
-  },
-  methods: {
-    show (image) {
-      this.src = require(`~/assets/image/${image}.jpg`)
-    }
-  }
-}
-</script>

@@ -1,37 +1,33 @@
+<script setup lang="ts">
+//
+</script>
+
 <template>
   <footer class="fixed-bottom py-3 text-center bg-light">
-    <nav class="container" :class="$style.contents" aria-label="Footer navigation">
-      <ul class="list-inline mb-0">
+    <nav
+      class="container"
+      :class="$style.contents"
+      aria-label="Footer navigation"
+    >
+      <ul class="mb-0 list-inline">
         <li class="list-inline-item">
-          <NLink :to="{ name: 'about' }" class="px-2 py-2">About</NLink>
+          <NuxtLink :to="{ name: 'about' }" class="p-3">About</NuxtLink>
         </li>
         <li class="list-inline-item">
-          <NLink :to="{ name: 'contact' }" class="px-2 py-2">Contact</NLink>
+          <NuxtLink :to="{ name: 'contact' }" class="p-3">Contact</NuxtLink>
         </li>
         <li class="list-inline-item">
-          <a :href="app.repositoryUrl" class="px-2 py-2" rel="noopener" target="_blank">GitHub</a>
+          <a
+            href="https://github.com/jamband/quietz"
+            rel="noopener noreferrer"
+            target="_blank"
+            class="p-3"
+            >GitHub</a
+          >
         </li>
       </ul>
     </nav>
   </footer>
 </template>
 
-<script>
-import { APP_REPOSITORY_URL } from '~/plugins/constants'
-
-export default {
-  data () {
-    return {
-      app: {
-        repositoryUrl: APP_REPOSITORY_URL
-      }
-    }
-  }
-}
-</script>
-
-<style lang="scss" module>
-.contents {
-  padding-bottom: env(safe-area-inset-bottom);
-}
-</style>
+<style lang="scss" module src="./styles.scss"></style>

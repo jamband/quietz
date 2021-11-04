@@ -1,5 +1,11 @@
+<script setup lang="ts">
+useOffcanvas();
+const { data: routes } = await useFetch("/api/offcanvas/routes");
+</script>
 <template>
   <div>
+    <ThePage title="Offcanvas"></ThePage>
+    <h1>Offcanvas</h1>
     <button
       class="btn btn-primary"
       type="button"
@@ -26,33 +32,16 @@
       </div>
       <div class="offcanvas-body">
         <div data-bs-dismiss="offcanvas">
-          <NLink
+          <NuxtLink
             v-for="route in routes"
             :key="route.name"
             :to="{ name: route.name }"
             class="nav-link"
           >
             {{ route.text }}
-          </NLink>
+          </NuxtLink>
         </div>
       </div>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data () {
-    return {
-      routes: [
-        { name: 'index', text: 'Home' },
-        { name: 'contact', text: 'Contact' },
-        { name: 'about', text: 'About' }
-      ]
-    }
-  },
-  mounted () {
-    import('bootstrap/js/dist/offcanvas')
-  }
-}
-</script>

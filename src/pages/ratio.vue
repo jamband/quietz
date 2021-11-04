@@ -1,52 +1,41 @@
+<script setup lang="ts">
+type Ratio = "21x9" | "16x9" | "4x3" | "1x1";
+
+const ratio = ref<Ratio>();
+const ratios: Array<Ratio> = ["21x9", "16x9", "4x3", "1x1"];
+const setRatio = (value: Ratio) => (ratio.value = value);
+</script>
+
 <template>
   <div>
+    <ThePage title="Ratio"></ThePage>
+    <h1>Ratio</h1>
     <div class="row justify-content-center">
-      <p class="btn btn-group btn-group-sm col-8" role="group" aria-label="Aspect ratio list">
+      <p
+        class="btn btn-group btn-group-sm col-8"
+        role="group"
+        aria-label="Aspect ratio list"
+      >
         <button
-          v-for="ratio in ratioList"
-          :key="ratio"
-          :aria-label="ratio"
+          v-for="_ratio in ratios"
+          :key="_ratio"
+          :aria-label="_ratio"
           type="button"
           class="btn btn-primary"
-          @click="setRatioSelector(ratio)"
+          @click="setRatio(_ratio)"
         >
-          {{ ratio }}
+          {{ _ratio }}
         </button>
       </p>
     </div>
-    <div v-if="ratioSelector" :class="ratioSelector" class="ratio">
-      <img
-        class="rounded"
-        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO89eDpfwAI2wOgwxlaYQAAAABJRU5ErkJggg=="
-        alt=""
-      >
+    <div class="ratio" :class="`ratio-${ratio}`">
+      <ImagePlaceholder
+        :text="ratio"
+        text-size="5em"
+        text-fill="#6b7279"
+        rect-fill="#bec7ce"
+        class="rounded shadow-sm font-monospace"
+      />
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data () {
-    return {
-      ratioSelector: ''
-    }
-  },
-  computed: {
-    ratioList () {
-      return ['21x9', '16x9', '4x3', '1x1']
-    }
-  },
-  methods: {
-    setRatioSelector (ratio) {
-      const { selector } = [
-        { ratio: '21x9', selector: 'ratio-21x9' },
-        { ratio: '16x9', selector: 'ratio-16x9' },
-        { ratio: '4x3', selector: 'ratio-4x3' },
-        { ratio: '1x1', selector: 'ratio-1x1' }
-      ].find(_ => _.ratio === ratio)
-
-      this.ratioSelector = selector
-    }
-  }
-}
-</script>

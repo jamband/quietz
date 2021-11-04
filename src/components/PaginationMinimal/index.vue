@@ -1,8 +1,47 @@
+<script setup lang="ts">
+type Props = {
+  currentPage: number;
+  pageCount: number;
+};
+
+const props = defineProps<Props>();
+
+const disabled = (part: string) => {
+  return ["first", "previous"].includes(part)
+    ? props.currentPage < 2
+    : props.currentPage >= props.pageCount;
+};
+
+const itemClass = (part: string) => {
+  let selector = "page-item flex-fill";
+  if (disabled(part)) {
+    selector += " disabled";
+  }
+  return selector;
+};
+
+const link = (part: string) => {
+  let page = 1;
+
+  if (part === "previous" && props.currentPage > 1) {
+    page = props.currentPage - 1;
+  } else if (part === "next" && props.currentPage === props.pageCount) {
+    page = props.pageCount;
+  } else if (part === "next" && props.currentPage !== props.pageCount) {
+    page = props.currentPage + 1;
+  } else if (part === "last") {
+    page = props.pageCount;
+  }
+
+  return { query: { page } };
+};
+</script>
+
 <template>
   <nav class="text-center" aria-label="Page navigation">
     <ul class="pagination">
       <li :class="itemClass('first')">
-        <NLink
+        <NuxtLink
           :to="link('first')"
           class="page-link"
           aria-label="First"
@@ -10,10 +49,10 @@
           :tabindex="disabled('first') ? -1 : 0"
         >
           <IconChevronDoubleLeft size="0.8em" />
-        </NLink>
+        </NuxtLink>
       </li>
       <li :class="itemClass('previous')">
-        <NLink
+        <NuxtLink
           :to="link('previous')"
           class="page-link"
           :aria-disabled="disabled('previous')"
@@ -21,10 +60,10 @@
           :tabindex="disabled('previous') ? -1 : 0"
         >
           <IconChevronLeft size="0.8em" />
-        </NLink>
+        </NuxtLink>
       </li>
       <li :class="itemClass('next')">
-        <NLink
+        <NuxtLink
           :to="link('next')"
           class="page-link"
           aria-label="Next"
@@ -32,10 +71,10 @@
           :tabindex="disabled('next') ? -1 : 0"
         >
           <IconChevronRight size="0.8em" />
-        </NLink>
+        </NuxtLink>
       </li>
       <li :class="itemClass('last')">
-        <NLink
+        <NuxtLink
           :to="link('last')"
           class="page-link"
           aria-label="Last"
@@ -43,7 +82,7 @@
           :tabindex="disabled('last') ? -1 : 0"
         >
           <IconChevronDoubleRight size="0.8em" />
-        </NLink>
+        </NuxtLink>
       </li>
     </ul>
     <div :class="$style.information" aria-label="Page information">
@@ -52,56 +91,4 @@
   </nav>
 </template>
 
-<script>
-export default {
-  props: {
-    currentPage: {
-      type: Number,
-      required: true
-    },
-    pageCount: {
-      type: Number,
-      required: true
-    }
-  },
-  methods: {
-    disabled (part) {
-      return ['first', 'previous'].includes(part)
-        ? this.currentPage < 2
-        : this.currentPage >= this.pageCount
-    },
-    itemClass (part) {
-      let selector = 'page-item flex-fill'
-      if (this.disabled(part)) {
-        selector += ' disabled'
-      }
-      return selector
-    },
-    link (part) {
-      let page = 1
-
-      if (part === 'previous' && this.currentPage > 1) {
-        page = this.currentPage - 1
-      } else if (part === 'next' && this.currentPage === this.pageCount) {
-        page = this.pageCount
-      } else if (part === 'next' && this.currentPage !== this.pageCount) {
-        page = this.currentPage + 1
-      } else if (part === 'last') {
-        page = this.pageCount
-      }
-
-      return { query: { page } }
-    }
-  }
-}
-</script>
-
-<style module>
-.information {
-  bottom: 3.6em;
-  color: darkgray;
-  font-size: 75%;
-  position: relative;
-  z-index: -1;
-}
-</style>
+<style module lang="scss" src="./styles.scss"></style>

@@ -1,6 +1,23 @@
 {
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "stylelint.validate": ["css", "scss", "vue"]
+  "editor.formatOnSave": true,
+  "stylelint.validate": ["css", "scss", "vue"],
+  "volar.completion.preferredTagNameCase": "pascal"
 }

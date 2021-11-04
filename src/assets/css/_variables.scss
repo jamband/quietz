@@ -89,11 +89,11 @@ $pagination-disabled-color:         color.scale($primary, $lightness: 75%);
 $pagination-disabled-bg:            transparent;
 
 // Toasts
-$toast-background-color:            $light;
-$toast-border-color:                $light;
+$toast-font-size:                   1rem;
+$toast-color:                       white;
+$toast-background-color:            $primary;
+$toast-border-width:                0;
 $toast-box-shadow:                  $box-shadow-sm;
-$toast-header-background-color:     $light;
-$toast-header-border-color:         color.scale($light, $lightness: -5%);
 
 // Modals
 $modal-backdrop-bg:                 $primary;

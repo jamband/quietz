@@ -1,51 +1,18 @@
+<script setup lang="ts">
+import { APP_URL } from "~/constants/app";
+</script>
+
 <template>
   <div class="d-flex flex-column min-vh-100 py-7">
+    <Head>
+      <Meta name="og:url" :content="APP_URL + $route.path" />
+    </Head>
+    <TheNotification />
     <TheHeader />
     <TheBreadcrumb />
     <div class="container flex-grow-1">
-      <h1 v-if="hasRouteName">{{ title }}</h1>
-      <Nuxt />
+      <slot />
     </div>
     <TheFooter />
   </div>
 </template>
-
-<script>
-import { APP_DESCRIPTION, APP_NAME } from '~/plugins/constants'
-import { capitalize } from '~/plugins/format'
-
-export default {
-  head () {
-    const title = this.isHome || !this.hasRouteName
-      ? APP_NAME
-      : `${this.title} · ${APP_NAME}`
-
-    const description = /^(index|about|contact)$/.test(this.routeName) || !this.hasRouteName
-      ? APP_DESCRIPTION
-      : `${this.title} example for Nuxt.js and Bootstrap 5`
-
-    return {
-      title,
-      meta: [
-        { hid: 'description', name: 'description', content: description },
-        { hid: 'og:title', property: 'og:title', content: title },
-        { hid: 'og:description', property: 'og:description', content: description }
-      ]
-    }
-  },
-  computed: {
-    routeName () {
-      return this.$route.name || ''
-    },
-    hasRouteName () {
-      return this.routeName !== ''
-    },
-    isHome () {
-      return this.routeName === 'index'
-    },
-    title () {
-      return this.isHome ? 'Home' : capitalize(this.routeName)
-    }
-  }
-}
-</script>

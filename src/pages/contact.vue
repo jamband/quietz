@@ -1,31 +1,20 @@
+<script setup lang="ts">
+import { APP_REPOSITORY_URL } from "~/constants/app";
+</script>
+
 <template>
   <div>
+    <ThePage title="Contact"></ThePage>
+    <h1>Contact</h1>
     <p>
       Please to the message via
-      <a
-        href="https://twitter.com/livejam_db"
-        rel="noopener"
-        target="_blank"
-      ><IconTwitter /> Twitter</a> or
-      <a
-        :href="`${app.repositoryUrl}/issues`"
-        rel="noopener"
-        target="_blank"
-      ><IconGitHub /> GitHub Issues</a>.
+      <LinkExternal href="https://twitter.com/livejam_db"
+        ><IconTwitter /> Twitter</LinkExternal
+      >
+      or
+      <LinkExternal :href="`${APP_REPOSITORY_URL}/issues`"
+        ><IconGitHub /> GitHub Issues</LinkExternal
+      >.
     </p>
   </div>
 </template>
-
-<script>
-import { APP_REPOSITORY_URL } from '~/plugins/constants'
-
-export default {
-  data () {
-    return {
-      app: {
-        repositoryUrl: APP_REPOSITORY_URL
-      }
-    }
-  }
-}
-</script>

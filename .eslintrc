@@ -2,18 +2,23 @@
   "root": true,
   "env": {
     "browser": true,
+    "es2020": true,
     "node": true
   },
+  "parser": "vue-eslint-parser",
   "parserOptions": {
-    "parser": "@babel/eslint-parser",
-    "requireConfigFile": false
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module"
   },
   "extends": [
-    "@nuxtjs",
-    "plugin:nuxt/recommended"
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:vue/base",
+    "plugin:vue/vue3-recommended",
+    "prettier"
   ],
   "rules": {
-    "vue/max-attributes-per-line": "off",
-    "vue/singleline-html-element-content-newline": "off"
+    "no-undef": "off",
+    "vue/multi-word-component-names": "off"
   }
 }

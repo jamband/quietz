@@ -1,34 +1,27 @@
+<script setup lang="ts">
+import {
+  APP_NAME,
+  APP_REPOSITORY_NAME,
+  APP_REPOSITORY_URL,
+} from "~/constants/app";
+</script>
+
 <template>
   <div>
+    <ThePage title="About"></ThePage>
+    <h1>About</h1>
     <p>
-      {{ app.name }} is my private playground for
-      <a href="https://nuxtjs.org" rel="noopener" target="_blank">Nuxt.js</a> and
-      <a href="https://getbootstrap.com" rel="noopener" target="_blank">Bootstrap 5</a>.
+      {{ APP_NAME }} is my private playground for
+      <LinkExternal href="https://nuxtjs.org">Nuxt.js</LinkExternal>
+      and
+      <LinkExternal href="https://getbootstrap.com">Bootstrap 5</LinkExternal>.
     </p>
     <p>
       This website is an open source project. See
-      <a
-        :href="app.repositoryUrl"
-        rel="noopener"
-        target="_blank"
-      ><IconGitHub /> GitHub {{ app.repositoryName }}</a>
+      <LinkExternal :href="APP_REPOSITORY_URL"
+        ><IconGitHub /> GitHub {{ APP_REPOSITORY_NAME }}</LinkExternal
+      >
       for details.
     </p>
   </div>
 </template>
-
-<script>
-import { APP_NAME, APP_REPOSITORY_NAME, APP_REPOSITORY_URL } from '~/plugins/constants'
-
-export default {
-  data () {
-    return {
-      app: {
-        name: APP_NAME,
-        repositoryName: APP_REPOSITORY_NAME,
-        repositoryUrl: APP_REPOSITORY_URL
-      }
-    }
-  }
-}
-</script>

@@ -1,0 +1,19 @@
+@import "../../../assets/css/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+.toast {
+  opacity: 0.9;
+  position: fixed;
+  top: 1rem;
+  z-index: $zindex-toast;
+
+  @include media-breakpoint-down(sm) {
+    left: 0;
+    margin: auto;
+    right: 0;
+  }
+
+  @include media-breakpoint-up(sm) {
+    right: 1rem;
+  }
+}
