@@ -1,10 +1,12 @@
 <script setup lang="ts">
+type ToggleButtonText = "Continue" | "Start" | "Pause";
+
 const bar = ref(0);
-const toggleButtonText = ref("Start");
+const toggleButtonText = ref<ToggleButtonText>("Start");
 const intervalId = ref(0);
 
 const toggle = () => {
-  if (/^(Start|Continue)$/.test(toggleButtonText.value)) {
+  if (["Start", "Continue"].includes(toggleButtonText.value)) {
     toggleButtonText.value = "Pause";
 
     intervalId.value = window.setInterval(() => {
