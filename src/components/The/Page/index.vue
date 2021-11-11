@@ -19,12 +19,14 @@ const description = ["404", "index", "about", "contact"].includes(routeName)
 
 <template>
   <div>
-    <Head>
-      <Title>{{ title }}</Title>
-      <Meta name="description" :content="description" />
-      <Meta name="og:title" :content="title" />
-      <Meta name="og:description" :content="description" />
-      <slot />
-    </Head>
+    <Html>
+      <Head>
+        <Title>{{ title }}</Title>
+        <Meta name="description" :content="description" />
+        <Meta name="og:title" :content="title" />
+        <Meta name="og:description" :content="description" />
+        <slot />
+      </Head>
+    </Html>
   </div>
 </template>
