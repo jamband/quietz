@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const { collapseRef, disabled, isCollapsed, toggleCollapse } = useCollapse();
+const { collapseRef, disabled, isCollapsed, ready, toggleCollapse } =
+  useCollapse();
 </script>
 
 <template>
@@ -7,7 +8,7 @@ const { collapseRef, disabled, isCollapsed, toggleCollapse } = useCollapse();
     <ThePage title="Collapse"></ThePage>
     <h1>Collapse</h1>
     <button
-      :disabled="disabled"
+      :disabled="disabled || !ready"
       type="button"
       class="btn btn-primary btn-sm w-25"
       data-bs-toggle="collapse"

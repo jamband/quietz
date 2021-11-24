@@ -2,6 +2,7 @@ export default function () {
   const collapseRef = ref<HTMLDivElement>();
   const disabled = ref(false);
   const isCollapsed = ref(true);
+  const ready = ref(false);
 
   const toggleCollapse = () => {
     disabled.value = true;
@@ -19,13 +20,16 @@ export default function () {
   };
 
   onMounted(() => {
-    import("bootstrap/js/dist/collapse");
+    import("bootstrap/js/dist/collapse").then(() => {
+      ready.value = true;
+    });
   });
 
   return {
     collapseRef,
     disabled,
     isCollapsed,
+    ready,
     toggleCollapse,
   } as const;
 }

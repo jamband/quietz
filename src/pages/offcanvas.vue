@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useOffcanvas();
+const { ready } = useOffcanvas();
 const { data: routes } = await useFetch("/api/offcanvas/routes");
 </script>
 <template>
@@ -7,6 +7,7 @@ const { data: routes } = await useFetch("/api/offcanvas/routes");
     <ThePage title="Offcanvas"></ThePage>
     <h1>Offcanvas</h1>
     <button
+      :disabled="!ready"
       class="btn btn-primary"
       type="button"
       data-bs-toggle="offcanvas"
