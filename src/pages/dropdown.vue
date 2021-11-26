@@ -70,13 +70,20 @@ onMounted(() => {
       </ul>
     </div>
     <div class="mt-3 text-center">
-      <span
-        v-for="(content, index) in contents"
-        :key="index"
-        :class="{ mark: isMatchedCharacter(content) }"
-        class="me-2 p-1 fw-bold font-monospace"
-        >{{ content }}</span
-      >
+      <template v-for="(content, index) in contents">
+        <mark
+          v-if="isMatchedCharacter(content)"
+          :key="index + 'matched'"
+          class="me-2 p-1 fw-bold font-monospace text-primary"
+          >{{ content }}</mark
+        >
+        <span
+          v-else
+          :key="index + 'notMatched'"
+          class="me-2 p-1 fw-bold font-monospace"
+          >{{ content }}</span
+        >
+      </template>
     </div>
   </div>
 </template>
