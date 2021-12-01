@@ -24,6 +24,7 @@ const purgeCssConfig =
           /^router-link(|-exact)-active$/,
           /data-v-.*/,
           /ratio-.*/,
+          /^_/, // for css modules
         ],
       }
     : false;
