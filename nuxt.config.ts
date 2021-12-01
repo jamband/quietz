@@ -3,6 +3,9 @@ import purgecssConfig from "./purgecss.config";
 
 export default defineNuxtConfig({
   srcDir: "src/",
+  typescript: {
+    strict: true,
+  },
   css: ["~/assets/css/app.scss"],
   build: {
     postcss: {
