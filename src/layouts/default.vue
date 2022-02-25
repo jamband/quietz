@@ -16,6 +16,7 @@ import { APP_NAME, APP_URL } from "~/constants/app";
         <Link rel="icon" href="/favicon.ico" />
       </Head>
     </Html>
+    <TheLoading />
     <TheNotification />
     <TheHeader />
     <TheBreadcrumb />
