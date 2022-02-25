@@ -16,7 +16,7 @@ const routes = [
 
 <template>
   <div>
-    <ThePage></ThePage>
+    <ThePage />
     <h1>Home</h1>
     <nav aria-label="Main navigation">
       <ul class="list-inline">

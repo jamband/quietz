@@ -31,4 +31,4 @@ const props = withDefaults(defineProps<Props>(), {
   </svg>
 </template>
 
-<style module lang="scss" src="./styles.scss"></style>
+<style module lang="scss" src="./styles.scss" />

@@ -91,4 +91,4 @@ const link = (part: string) => {
   </nav>
 </template>
 
-<style module lang="scss" src="./styles.scss"></style>
+<style module lang="scss" src="./styles.scss" />

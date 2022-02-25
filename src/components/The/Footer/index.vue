@@ -30,4 +30,4 @@
   </footer>
 </template>
 
-<style lang="scss" module src="./styles.scss"></style>
+<style lang="scss" module src="./styles.scss" />
