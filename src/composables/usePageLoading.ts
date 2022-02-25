@@ -1,12 +1,12 @@
 export default function () {
-  const { hook } = useNuxtApp();
+  const { afterEach, beforeEach } = useRouter();
   const state = ref<"initial" | "start" | "complete">("initial");
 
-  hook("page:start", () => {
+  beforeEach(() => {
     state.value = "start";
   });
 
-  hook("page:finish", () => {
+  afterEach(() => {
     setTimeout(() => {
       state.value = "complete";
     }, 100);
