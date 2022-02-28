@@ -13,7 +13,7 @@ import { APP_NAME, APP_URL } from "~/constants/app";
         <Meta name="og:type" content="website" />
         <Meta name="og:site_name" :content="APP_NAME" />
         <Meta name="og:url" :content="APP_URL + $route.path" />
-        <Link rel="icon" href="/favicon.ico" />
+        <Link rel="icon" href="/favicon.png" />
       </Head>
     </Html>
     <TheLoading />
