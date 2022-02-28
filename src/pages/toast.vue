@@ -27,7 +27,7 @@ const show = () => {
 
 <template>
   <div>
-    <ThePage title="Toast"></ThePage>
+    <ThePage title="Toast" />
     <h1>Toast</h1>
     <button
       :disabled="notification.show"

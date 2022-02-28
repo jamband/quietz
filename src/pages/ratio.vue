@@ -8,7 +8,7 @@ const setRatio = (value: Ratio) => (ratio.value = value);
 
 <template>
   <div>
-    <ThePage title="Ratio"></ThePage>
+    <ThePage title="Ratio" />
     <h1>Ratio</h1>
     <div class="row justify-content-center">
       <p

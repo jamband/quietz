@@ -30,7 +30,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <ThePage title="Form"></ThePage>
+    <ThePage title="Form" />
     <h1>Form</h1>
     <div class="my-3 display-5 text-center">
       <span class="font-monospace">{{ code }}</span>

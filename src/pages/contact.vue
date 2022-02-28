@@ -4,7 +4,7 @@ import { APP_REPOSITORY_URL } from "~/constants/app";
 
 <template>
   <div>
-    <ThePage title="Contact"></ThePage>
+    <ThePage title="Contact" />
     <h1>Contact</h1>
     <p>
       Please to the message via

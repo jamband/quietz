@@ -14,7 +14,7 @@ watchEffect(() => {
 
 <template>
   <div>
-    <ThePage title="Pagination"></ThePage>
+    <ThePage title="Pagination" />
     <h1>Pagination</h1>
     <div v-if="isLoading" class="text-center">
       <AppLoading />

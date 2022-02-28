@@ -8,7 +8,7 @@ import {
 
 <template>
   <div>
-    <ThePage title="About"></ThePage>
+    <ThePage title="About" />
     <h1>About</h1>
     <p>
       {{ APP_NAME }} is my private playground for

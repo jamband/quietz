@@ -30,7 +30,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <ThePage title="Dropdown"></ThePage>
+    <ThePage title="Dropdown" />
     <h1>Dropdown</h1>
     <div class="dropdown">
       <button

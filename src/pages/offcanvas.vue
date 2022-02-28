@@ -4,7 +4,7 @@ const { data: routes } = await useFetch("/api/offcanvas/routes");
 </script>
 <template>
   <div>
-    <ThePage title="Offcanvas"></ThePage>
+    <ThePage title="Offcanvas" />
     <h1>Offcanvas</h1>
     <button
       :disabled="!ready"

@@ -5,7 +5,7 @@ const { collapseRef, disabled, isCollapsed, ready, toggleCollapse } =
 
 <template>
   <div>
-    <ThePage title="Collapse"></ThePage>
+    <ThePage title="Collapse" />
     <h1>Collapse</h1>
     <button
       :disabled="disabled || !ready"

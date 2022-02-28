@@ -7,7 +7,7 @@ const show = (image: string) => (src.value = image);
 
 <template>
   <div>
-    <ThePage title="Modal"></ThePage>
+    <ThePage title="Modal" />
     <h1>Modal</h1>
     <ImageBadge
       v-for="image in images"

@@ -7,7 +7,7 @@ const reload = () => location.reload();
 
 <template>
   <div>
-    <ThePage title="Alert"></ThePage>
+    <ThePage title="Alert" />
     <h1>Alert</h1>
     <div class="text-end">
       <button type="button" class="btn btn-primary" @click="reload()">

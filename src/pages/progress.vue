@@ -32,7 +32,7 @@ const clear = () => {
 
 <template>
   <div>
-    <ThePage title="Progress"></ThePage>
+    <ThePage title="Progress" />
     <h1>Progress</h1>
     <div class="row">
       <div

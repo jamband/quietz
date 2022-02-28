@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    <ThePage title="Not Found"></ThePage>
+    <ThePage title="Not Found" />
     <h1>Not Found</h1>
     <p>
       <IconInfoCircleFill />
