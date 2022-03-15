@@ -12,17 +12,17 @@ import {
     <h1>About</h1>
     <p>
       {{ APP_NAME }} is my private playground for
-      <LinkExternal href="https://nuxtjs.org">Nuxt.js</LinkExternal>
+      <NuxtLink href="https://nuxtjs.org" target="_blank">Nuxt.js</NuxtLink>
       and
-      <LinkExternal href="https://getbootstrap.com">
+      <NuxtLink href="https://getbootstrap.com" target="_blank">
         <IconBootstrapFill />
-        Bootstrap 5</LinkExternal
+        Bootstrap 5</NuxtLink
       >.
     </p>
     <p>
       This website is an open source project. See
-      <LinkExternal :href="APP_REPOSITORY_URL"
-        ><IconGitHub /> GitHub {{ APP_REPOSITORY_NAME }}</LinkExternal
+      <NuxtLink :href="APP_REPOSITORY_URL" target="_blank"
+        ><IconGitHub /> GitHub {{ APP_REPOSITORY_NAME }}</NuxtLink
       >
       for details.
     </p>

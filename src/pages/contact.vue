@@ -8,12 +8,12 @@ import { APP_REPOSITORY_URL } from "~/constants/app";
     <h1>Contact</h1>
     <p>
       Please to the message via
-      <LinkExternal href="https://twitter.com/livejam_db"
-        ><IconTwitter /> Twitter</LinkExternal
+      <NuxtLink href="https://twitter.com/livejam_db" target="_blank"
+        ><IconTwitter /> Twitter</NuxtLink
       >
       or
-      <LinkExternal :href="`${APP_REPOSITORY_URL}/issues`"
-        ><IconGitHub /> GitHub Issues</LinkExternal
+      <NuxtLink :href="`${APP_REPOSITORY_URL}/issues`" target="_blank"
+        ><IconGitHub /> GitHub Issues</NuxtLink
       >.
     </p>
   </div>

@@ -17,12 +17,11 @@
           <NuxtLink :to="{ name: 'contact' }" class="p-3">Contact</NuxtLink>
         </li>
         <li class="list-inline-item">
-          <a
+          <NuxtLink
             href="https://github.com/jamband/quietz"
-            rel="noopener noreferrer"
             target="_blank"
             class="p-3"
-            >GitHub</a
+            >GitHub</NuxtLink
           >
         </li>
       </ul>
