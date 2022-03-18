@@ -8,13 +8,9 @@ export default defineNuxtConfig({
     strict: true,
   },
   css: ["~/assets/css/app.scss"],
-  build: {
-    postcss: {
-      postcssOptions: {
-        plugins: {
-          "@fullhuman/postcss-purgecss": purgecssConfig,
-        },
-      },
+  postcss: {
+    plugins: {
+      "@fullhuman/postcss-purgecss": purgecssConfig,
     },
   },
 });
