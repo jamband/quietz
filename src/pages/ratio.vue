@@ -21,7 +21,7 @@ const setRatio = (value: Ratio) => (ratio.value = value);
           :key="_ratio"
           :aria-label="_ratio"
           type="button"
-          class="btn btn-primary"
+          class="btn btn-primary font-monospace"
           @click="setRatio(_ratio)"
         >
           {{ _ratio }}
