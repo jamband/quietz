@@ -3,7 +3,6 @@ import purgecssConfig from "./purgecss.config";
 
 export default defineNuxtConfig({
   srcDir: "src/",
-  components: ["~/src/components"],
   typescript: {
     shim: false,
     strict: true,
