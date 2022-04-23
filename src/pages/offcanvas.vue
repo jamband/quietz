@@ -1,6 +1,11 @@
 <script setup lang="ts">
 const { ready } = useOffcanvas();
-const { data: routes } = await useFetch("/api/offcanvas/routes");
+
+const routes = [
+  { name: "index", text: "Home" },
+  { name: "about", text: "About" },
+  { name: "contact", text: "Contact" },
+];
 </script>
 <template>
   <div>

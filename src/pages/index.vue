@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// const { data: routes } = await useFetch("/api/home/routes");
 const routes = [
   { name: "alert", text: "Alert" },
   { name: "collapse", text: "Collapse" },
