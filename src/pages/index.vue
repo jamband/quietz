@@ -16,13 +16,14 @@ const routes = [
 <template>
   <div>
     <ThePage />
-    <h1>Home</h1>
-    <nav aria-label="Main navigation">
-      <ul class="list-inline">
-        <li v-for="route in routes" :key="route.name" class="list-inline-item">
-          <NuxtLink :to="{ name: route.name }">{{ route.text }}</NuxtLink>
-        </li>
-      </ul>
-    </nav>
+    <ul class="list-inline">
+      <li v-for="route in routes" :key="route.name" class="mb-3">
+        <div class="h2">
+          <NuxtLink :to="{ name: route.name }" class="text-decoration-none"
+            >{{ route.text }} <IconChevronRight size="0.5em"
+          /></NuxtLink>
+        </div>
+      </li>
+    </ul>
   </div>
 </template>

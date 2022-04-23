@@ -12,7 +12,7 @@ const setRatio = (value: Ratio) => (ratio.value = value);
     <h1>Ratio</h1>
     <div class="row justify-content-center">
       <p
-        class="btn btn-group btn-group-sm col-8"
+        class="w-100 btn btn-group btn-group-sm"
         role="group"
         aria-label="Aspect ratio list"
       >

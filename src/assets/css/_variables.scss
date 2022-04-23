@@ -55,6 +55,9 @@ $container-max-widths: (
   md: 720px,
 );
 
+// Grid columns
+$container-padding-x: 1.5rem;
+
 // Components
 $box-shadow-sm:               0 0.125rem 0.25rem color.scale(black, $lightness: 0%, $alpha: -90%);
 
