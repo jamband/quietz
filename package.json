@@ -6,8 +6,8 @@
     "lint": "eslint --ext .js,.ts,.vue .",
     "stylelint": "stylelint \"src/**/*.{css,scss,vue}\"",
     "format": "prettier --check .",
-    "clear": "rm -rf .nuxt .output dist",
-    "clean": "rm -rf .nuxt .output dist node_modules"
+    "clear": "node scripts/clear.mjs",
+    "clean": "node scripts/clean.mjs"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.1.3",
