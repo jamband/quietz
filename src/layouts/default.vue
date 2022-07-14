@@ -16,7 +16,7 @@ import { APP_NAME, APP_URL } from "~/constants/app";
         <Link rel="icon" href="/favicon.png" />
       </Head>
     </Html>
-    <TheLoading />
+    <NuxtLoadingIndicator color="#008f55" />
     <TheNotification />
     <TheHeader />
     <TheBreadcrumb />
