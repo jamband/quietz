@@ -34,29 +34,27 @@ const clear = () => {
   <div>
     <ThePage title="Progress" />
     <h1>Progress</h1>
-    <div class="row">
-      <div
-        class="btn-group btn-group-sm my-3 col-6 col-md-4"
-        role="group"
-        aria-label="Progress"
+    <div
+      class="btn-group btn-group-sm my-3 w-50"
+      role="group"
+      aria-label="Progress"
+    >
+      <button
+        :disabled="bar === 100"
+        type="button"
+        class="btn btn-primary w-50"
+        @click="toggle()"
       >
-        <button
-          :disabled="bar === 100"
-          type="button"
-          class="btn btn-primary w-25"
-          @click="toggle()"
-        >
-          {{ toggleButtonText }}
-        </button>
-        <button
-          :disabled="bar === 0"
-          type="button"
-          class="btn btn-primary w-25"
-          @click="clear()"
-        >
-          Clear
-        </button>
-      </div>
+        {{ toggleButtonText }}
+      </button>
+      <button
+        :disabled="bar === 0"
+        type="button"
+        class="btn btn-primary w-50"
+        @click="clear()"
+      >
+        Clear
+      </button>
     </div>
     <div class="progress mt-3" :class="$style.bar">
       <div
