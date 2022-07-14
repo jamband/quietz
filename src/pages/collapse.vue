@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const { collapseRef, disabled, isCollapsed, ready, toggleCollapse } =
   useCollapse();
 </script>

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 useModal();
 const src = ref("");
 const images = ["boat", "city", "butterfly"];

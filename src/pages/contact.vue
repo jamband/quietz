@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { APP_REPOSITORY_URL } from "~/constants/app";
 </script>
 

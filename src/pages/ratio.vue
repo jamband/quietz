@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 type Ratio = "21x9" | "16x9" | "4x3" | "1x1";
 
 const ratio = ref<Ratio>();

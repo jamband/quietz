@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const routes = [
   { name: "alert", text: "Alert" },
   { name: "collapse", text: "Collapse" },

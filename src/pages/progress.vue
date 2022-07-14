@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 type ToggleButtonText = "Continue" | "Start" | "Pause";
 
 const bar = ref(0);

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { generateContents } from "~/utils/string";
 
 type Character = "A" | "B" | "C";
