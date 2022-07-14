@@ -1,10 +1,8 @@
 <script lang="ts" setup>
-type Props = {
+const props = defineProps<{
   currentPage: number;
   pageCount: number;
-};
-
-const props = defineProps<Props>();
+}>();
 
 const disabled = (part: string) => {
   return ["first", "previous"].includes(part)

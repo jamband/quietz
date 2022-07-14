@@ -2,7 +2,12 @@
 import { generateCode } from "~/utils/string";
 
 const code = ref("");
-const form = reactive({ code: "", error: "" });
+
+const form = reactive({
+  code: "",
+  error: "",
+});
+
 const isSubmit = ref(false);
 
 const refreshCode = () => {

@@ -1,15 +1,15 @@
 <script lang="ts" setup>
 const routes = [
-  { name: "alert", text: "Alert" },
-  { name: "collapse", text: "Collapse" },
-  { name: "dropdown", text: "Dropdown" },
-  { name: "form", text: "Form" },
-  { name: "modal", text: "Modal" },
-  { name: "offcanvas", text: "Offcanvas" },
-  { name: "pagination", text: "Pagination" },
-  { name: "progress", text: "Progress" },
-  { name: "ratio", text: "Ratio" },
-  { name: "toast", text: "Toast" },
+  { path: "/alert", text: "Alert" },
+  { path: "/collapse", text: "Collapse" },
+  { path: "/dropdown", text: "Dropdown" },
+  { path: "/form", text: "Form" },
+  { path: "/modal", text: "Modal" },
+  { path: "/offcanvas", text: "Offcanvas" },
+  { path: "/pagination", text: "Pagination" },
+  { path: "/progress", text: "Progress" },
+  { path: "/ratio", text: "Ratio" },
+  { path: "/toast", text: "Toast" },
 ];
 </script>
 
@@ -17,9 +17,9 @@ const routes = [
   <div>
     <ThePage />
     <ul class="list-inline">
-      <li v-for="route in routes" :key="route.name" class="mb-3">
+      <li v-for="route in routes" :key="route.path" class="mb-3">
         <div class="h2">
-          <NuxtLink :to="{ name: route.name }" class="text-decoration-none"
+          <NuxtLink :to="route.path" class="text-decoration-none"
             >{{ route.text }} <IconChevronRight size="0.5em"
           /></NuxtLink>
         </div>

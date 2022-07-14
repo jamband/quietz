@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 useModal();
+
 const src = ref("");
 const images = ["boat", "city", "butterfly"];
 const show = (image: string) => (src.value = image);

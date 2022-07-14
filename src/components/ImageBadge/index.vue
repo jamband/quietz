@@ -1,10 +1,8 @@
 <script lang="ts" setup>
-type Props = {
+const props = defineProps<{
   image: string;
   text: string;
-};
-
-const props = defineProps<Props>();
+}>();
 </script>
 
 <template>

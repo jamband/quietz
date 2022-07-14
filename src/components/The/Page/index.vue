@@ -1,11 +1,10 @@
 <script lang="ts" setup>
 import { APP_DESCRIPTION, APP_NAME } from "~/constants/app";
 
-type Props = {
+const props = defineProps<{
   title?: string;
-};
+}>();
 
-const props = defineProps<Props>();
 const route = useRoute();
 
 const title = props.title ? `${props.title} ･ ${APP_NAME}` : APP_NAME;

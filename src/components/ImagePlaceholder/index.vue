@@ -1,14 +1,16 @@
 <script lang="ts" setup>
-type Props = {
-  text: string;
-  textSize: `${string}em` | `${string}rem`;
-  textFill: `#${string}`;
-  rectFill: `#${string}`;
-  height: number;
-};
-const props = withDefaults(defineProps<Props>(), {
-  height: 140,
-});
+const props = withDefaults(
+  defineProps<{
+    text: string;
+    textSize: `${string}em` | `${string}rem`;
+    textFill: `#${string}`;
+    rectFill: `#${string}`;
+    height: number;
+  }>(),
+  {
+    height: 140,
+  }
+);
 </script>
 
 <template>
