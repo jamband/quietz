@@ -1,10 +1,9 @@
 export default function () {
   const ready = ref(false);
 
-  onMounted(() => {
-    import("bootstrap/js/dist/offcanvas").then(() => {
-      ready.value = true;
-    });
+  onMounted(async () => {
+    await import("bootstrap/js/dist/offcanvas");
+    ready.value = true;
   });
 
   return {

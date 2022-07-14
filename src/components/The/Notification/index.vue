@@ -10,14 +10,14 @@ const clear = () => {
   }
 };
 
-watchEffect(() => {
+watchEffect(async () => {
   if (notification.value.show) {
-    import("bootstrap/js/dist/toast").then((module) => {
-      if (toastRef.value) {
-        new module.default(toastRef.value).show();
-        clear();
-      }
-    });
+    const toast = await import("bootstrap/js/dist/toast");
+
+    if (toastRef.value) {
+      new toast.default(toastRef.value).show();
+      clear();
+    }
   }
 });
 </script>

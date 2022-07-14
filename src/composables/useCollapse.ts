@@ -19,10 +19,9 @@ export default function () {
     }
   };
 
-  onMounted(() => {
-    import("bootstrap/js/dist/collapse").then(() => {
-      ready.value = true;
-    });
+  onMounted(async () => {
+    await import("bootstrap/js/dist/collapse");
+    ready.value = true;
   });
 
   return {

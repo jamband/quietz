@@ -1,5 +1,5 @@
 export default function () {
-  onMounted(() => {
-    import("bootstrap/js/dist/dropdown");
+  onMounted(async () => {
+    await import("bootstrap/js/dist/dropdown");
   });
 }

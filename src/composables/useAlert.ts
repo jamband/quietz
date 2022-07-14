@@ -1,5 +1,5 @@
 export default function () {
-  onMounted(() => {
-    import("bootstrap/js/dist/alert");
+  onMounted(async () => {
+    await import("bootstrap/js/dist/alert");
   });
 }
