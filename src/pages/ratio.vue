@@ -11,22 +11,18 @@ const setRatio = (value: Ratio) => (ratio.value = value);
     <ThePage title="Ratio" />
     <h1>Ratio</h1>
     <div class="row justify-content-center">
-      <p
-        class="w-100 btn btn-group btn-group-sm"
-        role="group"
-        aria-label="Aspect ratio list"
-      >
+      <div class="mb-3 btn-group" role="group" aria-label="Aspect ratio list">
         <button
           v-for="_ratio in ratios"
           :key="_ratio"
           :aria-label="_ratio"
           type="button"
-          class="btn btn-primary font-monospace"
+          class="btn btn-primary btn-sm font-monospace"
           @click="setRatio(_ratio)"
         >
           {{ _ratio }}
         </button>
-      </p>
+      </div>
     </div>
     <div class="ratio" :class="`ratio-${ratio}`">
       <ImagePlaceholder

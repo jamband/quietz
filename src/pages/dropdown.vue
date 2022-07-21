@@ -35,7 +35,7 @@ onMounted(() => {
     <div class="dropdown">
       <button
         id="dropdownSearchButton"
-        class="btn"
+        class="btn btn-primary"
         type="button"
         data-bs-toggle="dropdown"
         data-bs-offset="-3,5"
