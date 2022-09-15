@@ -1,4 +1,3 @@
-import { defineNuxtConfig } from "nuxt";
 import purgecssConfig from "./purgecss.config";
 
 export default defineNuxtConfig({
