@@ -6,6 +6,11 @@ export default defineNuxtConfig({
     shim: false,
     strict: true,
   },
+  app: {
+    head: {
+      viewport: "width=device-width, initial-scale=1, viewport-fit=cover",
+    },
+  },
   css: ["~/assets/css/app.scss"],
   postcss: {
     plugins: {
