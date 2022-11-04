@@ -1,11 +1,5 @@
 import { rmSync } from "fs";
 
-/** @type {import("fs").RmOptions} */
-const options = {
-  recursive: true,
-  force: true,
-};
-
-rmSync(".nuxt", options);
-rmSync(".output", options);
-rmSync("dist", options);
+rmSync(".nuxt", { recursive: true, force: true });
+rmSync(".output", { recursive: true, force: true });
+rmSync("dist", { recursive: true, force: true });
