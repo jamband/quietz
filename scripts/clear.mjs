@@ -1,5 +1,5 @@
-import { rmSync } from "fs";
+import { rm } from "node:fs/promises";
 
-rmSync(".nuxt", { recursive: true, force: true });
-rmSync(".output", { recursive: true, force: true });
-rmSync("dist", { recursive: true, force: true });
+await rm(".nuxt", { recursive: true, force: true });
+await rm(".output", { recursive: true, force: true });
+await rm("dist", { recursive: true, force: true });
