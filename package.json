@@ -4,6 +4,7 @@
     "postinstall": "nuxt prepare",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "typecheck": "nuxi typecheck",
     "lint": "eslint --ext .js,.ts,.vue .",
     "stylelint": "stylelint \"src/**/*.{css,scss,vue}\"",
     "format": "prettier --check .",
