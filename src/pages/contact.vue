@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { APP_REPOSITORY_URL } from "~/constants/app";
+const appConfig = useAppConfig();
 </script>
 
 <template>
@@ -12,7 +12,7 @@ import { APP_REPOSITORY_URL } from "~/constants/app";
         ><IconTwitter /> Twitter</NuxtLink
       >
       or
-      <NuxtLink :href="`${APP_REPOSITORY_URL}/issues`" target="_blank"
+      <NuxtLink :href="`${appConfig.repository.url}/issues`" target="_blank"
         ><IconGitHub /> GitHub Issues</NuxtLink
       >.
     </p>

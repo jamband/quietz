@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { APP_NAME, APP_URL } from "~/constants/app";
+const appConfig = useAppConfig();
 </script>
 
 <template>
@@ -7,8 +7,8 @@ import { APP_NAME, APP_URL } from "~/constants/app";
     <Html lang="en-US">
       <Head>
         <Meta name="og:type" content="website" />
-        <Meta name="og:site_name" :content="APP_NAME" />
-        <Meta name="og:url" :content="APP_URL + $route.path" />
+        <Meta name="og:site_name" :content="appConfig.name" />
+        <Meta name="og:url" :content="appConfig.url + $route.path" />
         <Link rel="icon" href="/favicon.png" />
       </Head>
     </Html>

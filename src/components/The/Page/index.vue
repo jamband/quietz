@@ -1,18 +1,19 @@
 <script lang="ts" setup>
-import { APP_DESCRIPTION, APP_NAME } from "~/constants/app";
-
 const props = defineProps<{
   title?: string;
 }>();
 
+const appConfig = useAppConfig();
 const route = useRoute();
 
-const title = props.title ? `${props.title} ･ ${APP_NAME}` : APP_NAME;
+const title = props.title
+  ? `${props.title} ･ ${appConfig.name}`
+  : appConfig.name;
 
 const routeName = route.name?.toString() || "";
 
 const description = ["404", "index", "about", "contact"].includes(routeName)
-  ? APP_DESCRIPTION
+  ? appConfig.description
   : `${props.title} example for Nuxt.js and Bootstrap 5`;
 </script>
 

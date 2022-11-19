@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { APP_DESCRIPTION } from "~/constants/app";
-
 useAlert();
+const appConfig = useAppConfig();
+
 const reload = () => location.reload();
 </script>
 
@@ -19,7 +19,7 @@ const reload = () => location.reload();
       role="alert"
     >
       <IconInfoCircleFill />
-      {{ APP_DESCRIPTION }}.
+      {{ appConfig.description }}.
       <button
         type="button"
         class="btn-close"
