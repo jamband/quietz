@@ -1,13 +1,14 @@
 {
   "private": true,
   "scripts": {
+    "postinstall": "nuxt prepare",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.ts,.vue .",
     "stylelint": "stylelint \"src/**/*.{css,scss,vue}\"",
     "format": "prettier --check .",
-    "clear": "node scripts/clear.mjs",
-    "clean": "node scripts/clean.mjs"
+    "clear": "nuxi cleanup",
+    "clean": "nuxi cleanup && node scripts/clean.mjs"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
