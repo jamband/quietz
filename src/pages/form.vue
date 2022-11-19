@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { generateCode } from "~/utils/string";
-
 const code = ref("");
 
 const form = reactive({

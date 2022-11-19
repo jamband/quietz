@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { capitalize } from "~/utils/format";
-
 const routes = () => {
   const name = useRoute().name?.toString() || "";
   if (name === "") return [];
