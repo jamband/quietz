@@ -6,6 +6,5 @@
     "source.fixAll": true
   },
   "editor.formatOnSave": true,
-  "volar.codeLens.references": false,
-  "volar.completion.preferredTagNameCase": "pascal"
+  "volar.codeLens.references": false
 }
