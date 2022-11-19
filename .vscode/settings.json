@@ -1,12 +1,11 @@
 {
-  "[javascript][json][jsonc][typescript][vue]": {
+  "[css][javascript][json][jsonc][scss][typescript][vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
   "editor.formatOnSave": true,
-  "stylelint.validate": ["css", "scss", "vue"],
   "volar.codeLens.references": false,
   "volar.completion.preferredTagNameCase": "pascal"
 }
