@@ -21,7 +21,13 @@ const { collapseRef, disabled, isCollapsed, ready, toggleCollapse } =
     </button>
     <div id="collapseExample" ref="collapseRef" class="collapse mt-3">
       <div class="p-3 shadow-sm bg-light rounded">
-        <IconInfoCircleFill />
+        <IconInfoCircleFill
+          :style="{
+            height: '1em',
+            width: '1em',
+            verticalAlign: '-0.125em',
+          }"
+        />
         Toggle the visibility of content across your project.
       </div>
     </div>

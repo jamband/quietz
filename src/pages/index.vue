@@ -20,7 +20,14 @@ const routes = [
       <li v-for="route in routes" :key="route.path" class="mb-3">
         <div class="h2">
           <NuxtLink :to="route.path" class="text-decoration-none"
-            >{{ route.text }} <IconChevronRight size="0.5em"
+            >{{ route.text }}
+            <IconChevronRight
+              :style="{
+                marginLeft: '0.2rem',
+                height: '0.5em',
+                width: '0.5em',
+                verticalAlign: '0.1em',
+              }"
           /></NuxtLink>
         </div>
       </li>

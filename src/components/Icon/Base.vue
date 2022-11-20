@@ -1,21 +1,18 @@
 <script lang="ts" setup>
-type Props = {
-  size?: `${string}em`;
-};
+import type { SVGAttributes } from "vue";
 
-const props = withDefaults(defineProps<Props>(), {
-  size: "1em",
-});
+const props = defineProps<{
+  fill: SVGAttributes["fill"];
+  viewBox: SVGAttributes["viewBox"];
+}>();
 </script>
 
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    :width="props.size"
-    height="1em"
-    fill="currentColor"
-    viewBox="0 0 16 16"
-    :style="{ display: 'inline-block', verticalAlign: '-0.125em' }"
+    :fill="props.fill"
+    :viewBox="props.viewBox"
+    class="d-inline-block"
   >
     <slot />
   </svg>

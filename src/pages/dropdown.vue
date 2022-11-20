@@ -39,8 +39,14 @@ onMounted(() => {
         data-bs-offset="-3,5"
         aria-expanded="false"
       >
-        <span class="pe-1">Search</span>
-        <IconChevronDown size="0.8em" />
+        <span class="me-2">Search</span>
+        <IconChevronDown
+          :style="{
+            height: '0.8em',
+            width: '0.8em',
+            verticalAlign: '-0.075em',
+          }"
+        />
       </button>
       <ul
         class="dropdown-menu shadow-sm bg-light"

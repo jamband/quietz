@@ -12,7 +12,13 @@ const message = isNotFound ? "Page not found." : error.value?.message;
       <ThePage :title="title" />
       <h1>{{ title }}</h1>
       <p>
-        <IconInfoCircleFill />
+        <IconInfoCircleFill
+          :style="{
+            height: '1em',
+            width: '1em',
+            verticalAlign: '-0.125em',
+          }"
+        />
         {{ message }}
       </p>
       <div class="my-5 text-center">

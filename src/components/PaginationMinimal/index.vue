@@ -46,7 +46,14 @@ const link = (part: string) => {
           :aria-disabled="disabled('first')"
           :tabindex="disabled('first') ? -1 : 0"
         >
-          <IconChevronDoubleLeft size="0.8em" />
+          <IconChevronDoubleLeft
+            :style="{
+              marginRight: '0.125rem',
+              height: '1em',
+              width: '1em',
+              verticalAlign: '-0.125em',
+            }"
+          />
         </NuxtLink>
       </li>
       <li :class="itemClass('previous')">
@@ -57,7 +64,14 @@ const link = (part: string) => {
           aria-label="Previous"
           :tabindex="disabled('previous') ? -1 : 0"
         >
-          <IconChevronLeft size="0.8em" />
+          <IconChevronLeft
+            :style="{
+              marginRight: '0.125rem',
+              height: '1em',
+              width: '1em',
+              verticalAlign: '-0.125em',
+            }"
+          />
         </NuxtLink>
       </li>
       <li :class="itemClass('next')">
@@ -68,7 +82,14 @@ const link = (part: string) => {
           :aria-disabled="disabled('next')"
           :tabindex="disabled('next') ? -1 : 0"
         >
-          <IconChevronRight size="0.8em" />
+          <IconChevronRight
+            :style="{
+              marginRight: '0.125rem',
+              height: '1em',
+              width: '1em',
+              verticalAlign: '-0.125em',
+            }"
+          />
         </NuxtLink>
       </li>
       <li :class="itemClass('last')">
@@ -79,11 +100,18 @@ const link = (part: string) => {
           :aria-disabled="disabled('last')"
           :tabindex="disabled('last') ? -1 : 0"
         >
-          <IconChevronDoubleRight size="0.8em" />
+          <IconChevronDoubleRight
+            :style="{
+              marginRight: '0.125rem',
+              height: '1em',
+              width: '1em',
+              verticalAlign: '-0.125em',
+            }"
+          />
         </NuxtLink>
       </li>
     </ul>
-    <div :class="$style.information" aria-label="Page information">
+    <div :class="[$style.information, 'fw-bold']" aria-label="Page information">
       {{ currentPage }}/{{ pageCount }}
     </div>
   </nav>

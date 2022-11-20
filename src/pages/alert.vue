@@ -18,7 +18,14 @@ const reload = () => location.reload();
       class="alert alert-dismissible fade show my-3 bg-light shadow-sm"
       role="alert"
     >
-      <IconInfoCircleFill />
+      <IconInfoCircleFill
+        :style="{
+          marginRight: '0.125rem',
+          height: '1em',
+          width: '1em',
+          verticalAlign: '-0.125em',
+        }"
+      />
       {{ appConfig.description }}.
       <button
         type="button"

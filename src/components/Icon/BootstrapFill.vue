@@ -1,15 +1,5 @@
-<script lang="ts" setup>
-type Props = {
-  size?: `${string}em`;
-};
-
-const props = withDefaults(defineProps<Props>(), {
-  size: "1em",
-});
-</script>
-
 <template>
-  <IconBase :size="props.size">
+  <IconBase fill="currentColor" view-box="0 0 16 16">
     <path
       d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375v2.725z"
     />
