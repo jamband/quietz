@@ -4,7 +4,7 @@ const appConfig = useAppConfig();
 
 <template>
   <div class="d-flex flex-column min-vh-100 py-7">
-    <Html lang="en-US">
+    <Html lang="en">
       <Head>
         <Meta name="og:type" content="website" />
         <Meta name="og:site_name" :content="appConfig.name" />
