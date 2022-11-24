@@ -5,7 +5,7 @@
   opacity: 0.9;
   position: fixed;
   top: 1rem;
-  z-index: $zindex-toast;
+  z-index: var(--bs-toast-zindex);
 
   @include media-breakpoint-down(sm) {
     left: 0;

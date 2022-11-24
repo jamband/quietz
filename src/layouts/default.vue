@@ -12,7 +12,7 @@ const appConfig = useAppConfig();
         <Link rel="icon" href="/favicon.png" />
       </Head>
     </Html>
-    <NuxtLoadingIndicator color="#15803d" />
+    <TheLoading />
     <TheNotification />
     <TheHeader />
     <TheBreadcrumb />
