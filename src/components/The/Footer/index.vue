@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <footer class="fixed-bottom py-3 text-center bg-light">
+  <footer class="fixed-bottom py-3 text-center bg-light border-top border-dark">
     <nav
       class="container"
       :class="$style.contents"
