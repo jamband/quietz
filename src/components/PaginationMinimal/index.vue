@@ -111,7 +111,10 @@ const link = (part: string) => {
         </NuxtLink>
       </li>
     </ul>
-    <div :class="[$style.information, 'fw-bold']" aria-label="Page information">
+    <div
+      :class="[$style.information, 'fw-bold font-monospace']"
+      aria-label="Page information"
+    >
       {{ currentPage }}/{{ pageCount }}
     </div>
   </nav>
