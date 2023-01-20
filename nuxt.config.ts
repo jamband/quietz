@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
-  css: ["~/assets/css/app.scss"],
+  css: ["@/assets/css/app.scss"],
   postcss: {
     plugins: {
       "@fullhuman/postcss-purgecss": purgecssConfig,

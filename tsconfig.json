@@ -1,7 +1,6 @@
 {
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    "importsNotUsedAsValues": "error",
-    "paths": { "~/*": ["src/*"] }
+    "importsNotUsedAsValues": "error"
   }
 }
