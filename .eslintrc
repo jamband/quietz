@@ -17,6 +17,7 @@
     "plugin:vue/vue3-recommended",
     "prettier"
   ],
+  "ignorePatterns": ["dist"],
   "rules": {
     "no-undef": "off",
     "vue/multi-word-component-names": "off"
