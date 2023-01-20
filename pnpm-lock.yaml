@@ -4,17 +4,17 @@ specifiers:
   '@fullhuman/postcss-purgecss': ^5.0.0
   '@popperjs/core': ^2.11.6
   '@types/bootstrap': ^5.2.6
-  '@typescript-eslint/eslint-plugin': ^5.48.1
-  '@typescript-eslint/parser': ^5.48.1
+  '@typescript-eslint/eslint-plugin': ^5.48.2
+  '@typescript-eslint/parser': ^5.48.2
   bootstrap: ^5.2.3
-  eslint: ^8.31.0
+  eslint: ^8.32.0
   eslint-config-prettier: ^8.6.0
   eslint-plugin-vue: ^9.9.0
   nuxt: ^3.0.0
   postcss: ^8.4.21
   postcss-html: ^1.5.0
   postcss-scss: ^4.0.6
-  prettier: 2.8.2
+  prettier: 2.8.3
   sass: ^1.57.1
   typescript: ^4.9.4
 
@@ -32,7 +32,7 @@ devDependencies:
   postcss: 8.4.21
   postcss-html: 1.5.0
   postcss-scss: 4.0.6_postcss@8.4.21
-  prettier: 2.8.2
+  prettier: 2.8.3
   sass: 1.57.1
   typescript: 4.9.4
 
@@ -4302,8 +4302,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier/2.8.2:
-    resolution: {integrity: sha512-BtRV9BcncDyI2tsuS19zzhzoxD8Dh8LiCx7j7tHzrkz8GFXAexeWFdi22mjE1d16dftH2qNaytVxqiRTGlMfpw==}
+  /prettier/2.8.3:
+    resolution: {integrity: sha512-tJ/oJ4amDihPoufT5sM0Z1SKEuKay8LfVAMlbbhnnkvt6BUserZylqo2PN+p9KeljLr0OHa2rXHU1T8reeoTrw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
