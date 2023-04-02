@@ -19,6 +19,7 @@
   ],
   "ignorePatterns": ["dist"],
   "rules": {
+    "@typescript-eslint/consistent-type-imports": "error",
     "no-undef": "off",
     "vue/multi-word-component-names": "off"
   }
