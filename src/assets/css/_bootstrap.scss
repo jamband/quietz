@@ -1,7 +1,6 @@
 /*!
- * Bootstrap v5.2.2 (https://getbootstrap.com/)
- * Copyright 2011-2022 The Bootstrap Authors
- * Copyright 2011-2022 Twitter, Inc.
+ * Bootstrap v5.3.0 (https://getbootstrap.com/)
+ * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
@@ -9,6 +8,7 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "./variables"; // Custom variables
 @import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/variables-dark";
 @import "../../../node_modules/bootstrap/scss/maps";
 @import "../../../node_modules/bootstrap/scss/mixins";
 @import "../../../node_modules/bootstrap/scss/utilities";
