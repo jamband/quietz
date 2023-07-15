@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
+  experimental: {
+    payloadExtraction: true,
+  },
   css: ["@/assets/css/app.scss"],
   postcss: {
     plugins: {
