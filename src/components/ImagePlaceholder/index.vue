@@ -9,7 +9,7 @@ const props = withDefaults(
   }>(),
   {
     height: 140,
-  }
+  },
 );
 </script>
 
