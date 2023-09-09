@@ -1,7 +1,11 @@
 <script lang="ts" setup>
-const error = useError();
+type Error = Ref<{
+  message: string;
+  statusCode: number;
+}>;
 
-const isNotFound = Number(error.value?.statusCode || 500) === 404;
+const error = useError() as Error;
+const isNotFound = Number(error.value.statusCode || 500) === 404;
 const title = isNotFound ? "Not Found" : "An Error Occurred";
 const message = isNotFound ? "Page not found." : error.value?.message;
 </script>
