@@ -9,14 +9,14 @@ const appConfig = useAppConfig();
     <p>
       Please to the message via
       <NuxtLink href="https://twitter.com/livejam_db" target="_blank"
-        ><IconTwitter
+        ><IconTwitterX
           :style="{
             marginRight: '0.125rem',
             height: '1em',
             width: '1em',
             verticalAlign: '-0.125em',
           }"
-        />Twitter</NuxtLink
+        />X</NuxtLink
       >
       or
       <NuxtLink :href="`${appConfig.repository.url}/issues`" target="_blank"
