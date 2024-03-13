@@ -14,20 +14,20 @@
     "@fullhuman/postcss-purgecss": "5.0.0",
     "@popperjs/core": "2.11.8",
     "@types/bootstrap": "5.2.10",
-    "@types/node": "18.19.17",
-    "@typescript-eslint/eslint-plugin": "7.0.2",
-    "@typescript-eslint/parser": "7.0.2",
+    "@types/node": "18.19.23",
+    "@typescript-eslint/eslint-plugin": "7.2.0",
+    "@typescript-eslint/parser": "7.2.0",
     "bootstrap": "5.3.3",
-    "eslint": "8.56.0",
+    "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-vue": "9.21.1",
-    "nuxt": "3.10.2",
+    "eslint-plugin-vue": "9.23.0",
+    "nuxt": "3.10.3",
     "postcss": "8.4.35",
     "postcss-html": "1.6.0",
     "postcss-scss": "4.0.9",
     "prettier": "3.2.5",
     "sass": "1.71.1",
-    "typescript": "5.3.3",
-    "vue-tsc": "1.8.27"
+    "typescript": "5.4.2",
+    "vue-tsc": "2.0.6"
   }
 }
